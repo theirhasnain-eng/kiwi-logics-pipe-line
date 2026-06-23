@@ -1,4 +1,5 @@
 
+import Footer from '../components/Footer'
 import Navebar from '../components/Navebar'
 import './styling/feature.css'
 
@@ -37,7 +38,7 @@ export default function Features(){
 </section>
          <h1>Features Page</h1>
          
-
+            <Footer/>
         </>
     )
 }

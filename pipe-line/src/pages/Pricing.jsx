@@ -1,4 +1,5 @@
 
+import Footer from '../components/Footer'
 import Navebar from '../components/Navebar'
 import './styling/pricing.css'
 
@@ -36,7 +37,7 @@ import './styling/pricing.css'
   </div>
 </section>
          <h1>Pricing Page</h1>
-
+        <Footer/>
         </>
     )
 }

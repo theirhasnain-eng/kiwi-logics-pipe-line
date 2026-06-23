@@ -37,6 +37,9 @@ import './styling/integration.css'
 </section>
 
           <h1>Integrations Page</h1>
+
+
+          <Footer/>
           
         </>
     )

@@ -36,7 +36,7 @@ export default function Home(){
   </div>
 </section>
         <h1>Home Page is </h1>
-       
+        <Footer/>
         </>
     )
 }

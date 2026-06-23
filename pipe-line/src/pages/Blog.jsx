@@ -37,7 +37,7 @@ export default function Blog(){
 </section>
 
          <h1>Blog Page</h1>
-       
+       <Footer/>
         </>
     )
 }
