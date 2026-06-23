@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import Integrations from './pages/Integrations';
 import Navebar from './components/Navebar';
 import Blog from './pages/Blog';
+import Hero from './components/Hero';
 
 
 
@@ -16,7 +17,7 @@ export default function App() {
   return (
     <>
       <Navebar/>
-      
+      <Hero/>
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/features" element={<Features />} />
