@@ -1,5 +1,6 @@
-import { useState,useEffect } from 'react';
-import './styling/hero.css'
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './styling/hero.css';
 import { FaBook } from 'react-icons/fa';
 function Hero(){
 
@@ -38,11 +39,11 @@ function Hero(){
       </p>
 
         <div className="hero-btns">
-              <a href="#contact" className="custom-btn btn1">Start Free Trial →</a>
-              <a href="#contact" className="custom-btn btn2">
+              <Link to="/contact" className="custom-btn btn1">Start Free Trial →</Link>
+              <Link to="/contact" className="custom-btn btn2">
                <FaBook style={{ marginRight: "8px ", color:"blue" }} />
               Book a Demo
-                 </a>
+                 </Link>
         </div>
 
         <div className="line"></div>

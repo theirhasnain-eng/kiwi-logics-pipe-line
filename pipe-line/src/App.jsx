@@ -9,20 +9,16 @@ import Contact from './pages/Contact';
 import Integrations from './pages/Integrations';
 import Navebar from './components/Navebar';
 import Blog from './pages/Blog';
-import Hero from './components/Hero';
-
-
 
 export default function App() {
   return (
     <>
-      <Navebar/>
-      <Hero/>
+      <Navebar />
       <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<Home />} />
         <Route path="/features" element={<Features />} />
         <Route path="/pricing" element={<Pricing />} />
-        <Route path="/integrations" element={<Integrations />}/>
+        <Route path="/integrations" element={<Integrations />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
@@ -31,4 +27,3 @@ export default function App() {
     </>
   );
 }
-

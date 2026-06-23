@@ -1,46 +1,9 @@
+import './styling/integration.css';
 
-import Navebar from '../components/Navebar'
-import './styling/integration.css'
-
- export default function Integrations(){
-    return(
-        <>
-        <Navebar/>
-        <section className="contact-section" id="contact">
-  <div className="contact-container">
-    <h2>Get a Free Demo</h2>
-    <p>
-      See how PipelineIQ can help your team close more deals.
-    </p>
-
-    <form className="contact-form">
-      <div className="form-row">
-        <input type="text" placeholder="Full Name" required />
-        <input type="email" placeholder="Email Address" required />
-      </div>
-
-      <div className="form-row">
-        <input type="text" placeholder="Company Name" />
-        <input type="tel" placeholder="Phone Number" />
-      </div>
-
-      <textarea
-        rows="5"
-        placeholder="Tell us about your requirements"
-      ></textarea>
-
-      <button type="submit">
-        Book a Demo
-      </button>
-    </form>
-  </div>
-</section>
-
-          <h1>Integrations Page</h1>
-
-
-          <Footer/>
-          
-        </>
-    )
+export default function Integrations() {
+  return (
+    <main className="page-section">
+      <h1>Integrations Page</h1>
+    </main>
+  );
 }
