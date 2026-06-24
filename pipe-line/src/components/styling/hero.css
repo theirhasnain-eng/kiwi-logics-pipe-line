@@ -12,15 +12,9 @@
   padding: 140px 5% 80px;
 
   text-align: center;
-
-  background:
-    radial-gradient(
-      ellipse 80% 60% at 50% -10%,
-      rgba(79,110,247,0.18) 0%,
-      transparent 70%
-    );
+  background:radial-gradient(ellipse at 50% 40%,rgba(90,71,245,.28) 0%,transparent 70%),
 }
-
+  
 /* Badge */
 
 .hero-badge {
@@ -183,7 +177,7 @@
   margin: 1rem auto;
 
   background:
-    rgba(236,233,233,0.4);
+   var(--bg3);
 }
 
 /* =========================
@@ -224,7 +218,7 @@
 
   margin-top: 4rem;
 
-  background: var(--card);
+  background: var(--bg3);
 
   border: 1px solid var(--border);
   border-radius: 16px;
@@ -244,7 +238,7 @@
 
   padding: 12px 20px;
 
-  background: var(--bg2);
+  background: var(--bg3);
 
   border-bottom: 1px solid var(--border);
 }
@@ -272,7 +266,7 @@
 .dash-url {
   flex: 1;
 
-  background: var(--bg);
+  background: var(--bg3);
 
   border-radius: 6px;
 
@@ -289,7 +283,7 @@
 
 .dash-body {
   padding: 24px;
-  background: var(--bg2);
+  background: var(--bg3);
 
   display: flex;
   flex-direction: column;
@@ -310,7 +304,7 @@
 
   border-radius: 12px;
 
-  background: var(--bg2);
+  background: var(--bg3);
 }
 
 .dash-card-main {
@@ -353,6 +347,7 @@
   display: flex;
   gap: 12px;
 }
+
 
 .stage {
   flex: 1;

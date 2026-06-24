@@ -87,20 +87,68 @@ function Hero(){
             <div className="dash-card-value">$890K</div>
             <div className="dash-card-change">↑ +18% vs last month</div>
           </div> */}
-          <div className="pipeline-stages">
-            {[
-              { name: 'Qualified', count: 42, color: '#60a5fa', width: '80%' },
-              { name: 'Proposal', count: 28, color: '#a78bfa', width: '60%' },
-              { name: 'Negotiation', count: 15, color: '#fb923c', width: '40%' },
-              { name: 'Closed Won', count: "$890k", color: '#10b981', width: '90%' },
-            ].map(s => (
-              <div className="stage" key={s.name}>
-                <div className="stage-name">{s.name}</div>
-                <div className="stage-count" style={{ color: s.color }}>{s.count}</div>
-                <div className="stage-bar" style={{ background: s.color, width: s.width }} />
-              </div>
-            ))}
-          </div>
+         <div className="pipeline-stages">
+  {[
+    {
+      name: "Qualified",
+      count: 42,
+      color: "#60a5fa",
+      bg: "rgba(96,165,250,0.12)",
+      width: "80%",
+    },
+    {
+      name: "Proposal",
+      count: 28,
+      color: "#a78bfa",
+      bg: "rgba(167,139,250,0.12)",
+      width: "60%",
+    },
+    {
+      name: "Negotiation",
+      count: 15,
+      color: "#fb923c",
+      bg: "rgba(251,146,60,0.12)",
+      width: "40%",
+    },
+    {
+      name: "Closed Won",
+      count: "$890k",
+      color: "#10b981",
+      bg: "rgba(16,185,129,0.12)",
+      width: "90%",
+    },
+  ].map((s) => (
+    <div
+      className="stage"
+      key={s.name}
+      style={{
+        background: s.bg,
+        border: `1px solid ${s.color}40`,
+      }}
+    >
+      <div className="stage-name">
+        {s.name}
+      </div>
+
+      <div
+        className="stage-count"
+        style={{ color: s.color }}
+      >
+        {s.count}
+      </div>
+
+      <div className="stage-track">
+        <div
+          className="stage-bar"
+          style={{
+            background: s.color,
+            width: s.width,
+          }}
+        />
+      </div>
+    </div>
+  ))}
+</div>
         </div>
       </div>
     </section>

@@ -1,8 +1,164 @@
-.page-section {
-  padding: 120px 5% 80px;
-  min-height: 60vh;
+
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  width: 100%;
+  height: 400px;
+  background-color: #133580e5;
+   padding: 100px 5%;
+
+}
+.main h1{
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
+}
+.main p{
+  max-width: 600px;
+  color: rgb(223, 221, 221);
+  font-weight: 600;
 }
 
-.page-section h1 {
-  font-size: 2.5rem;
+.btn{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.btn-text{
+  font-size: 15px;
+  color: #e6e3e3;
+}
+
+
+
+.feature{
+  background: rgba(2, 2, 5, 0.829);
+   padding: 100px 5%;
+}
+
+
+
+.text-center{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.heading{
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: white;
+}
+
+
+.text-center .section-sub{
+    max-width: 780px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--muted2);
+    text-align: center;
+
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 380px));
+  justify-content: center;
+  gap: 10px;
+  margin-top: 4rem;
+}
+.feature-card {
+  background: var(--card);
+  border: 1px solid var(--card);
+  border-radius: var(--radius);
+  
+
+}
+
+.feature-icon {
+  width: 30px; height: 30px;
+  background: rgba(73, 87, 207, 0.527);
+  border: 1px solid rgba(79,110,247,0.3);
+  color: rgb(244, 245, 248);
+  border-radius: 7px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+  
+}
+.card-submain h1{
+
+  font-size: 15px;
+}
+.card-submain{
+  margin-top: -10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.card-submain h4 {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 400;
+}
+.sub-main{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.feature-card p {
+  color: var(--muted2);
+  font-size: 13px;
+  font-weight: 600;
+
+  line-height: 1.6;
+}
+.feature-main{
+  max-width: 400px;
+}
+.feature-card{
+  max-height: 140px;
+  max-width: 360px;
+}
+
+
+
+.main-sub{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  width: 100%;
+  height: 350px;
+  background-color: #133580e5;
+   padding: 100px 5%;
+
+}
+.main-sub h1{
+  font-size: 3.1rem;
+}
+
+.main-sub p{
+  max-width:600px;
+}
+.integ-btn{
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 15px;
+  font-weight: 500;
+  color: rgb(13, 78, 197);
 }
