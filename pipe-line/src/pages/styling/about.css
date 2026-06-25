@@ -1,0 +1,147 @@
+
+
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  width: 100%;
+  height: 450px;
+  background-color: #133580e5;
+   padding: 100px 5%;
+
+}
+.main h1{
+  padding-top: 70px;
+  font-size: 3.1rem;
+  font-weight: 600;
+  color: white;
+}
+.main p{
+  max-width: 600px;
+  color: #e6e3e3;
+  font-weight: 600;
+}
+
+.btn{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.btn-text{
+  font-size: 15px;
+  color: #e6e3e3;
+}
+
+#team h1{
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+
+.team-btn{
+    padding: 10px 20px;
+    border-radius: 15px;
+    color: rgb(32, 178, 236);
+    background-color: rgba(255, 255, 255, 0.911);
+}
+
+.mission-main{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px 0%;
+    gap: 20px;
+  width: 100%;
+  min-height: 700px;
+  background-color: rgba(8, 5, 5, 0.747);
+
+}
+
+.main-left{
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 60px;
+}
+
+
+.main-left h5 {
+  display: inline-block;
+  width: fit-content;
+  color: rgb(6, 170, 235);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+   background-color: rgba(20, 104, 214, 0.541);
+}
+.main-left h1{
+    line-height: 40px;
+    max-width: 500px;
+    min-width: 400px;
+}
+.main-left span{
+    color: skyblue;
+    font-weight: 700;
+}
+.main-left p{
+   color: var(--muted);
+   font-weight: 600;
+   min-width: 400px;
+}
+
+
+.main-right img {
+     width: 100%;
+    max-width: 550px;
+    object-fit: cover;
+    display: block;
+    margin-top: 25px;
+    height: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 0 auto;
+  padding: 0 30px;
+  
+}
+
+.value{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 600px;
+}
+.value-text h1{
+    font-size: 3rem;
+    font-weight: 700;
+}
+.value-text p{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--muted);
+}
+.value-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    max-height: 260px;
+}
+.icon{
+    /* padding: 8px 12px; */
+}

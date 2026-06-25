@@ -1,5 +1,4 @@
-
-.main{
+.main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,135 +6,138 @@
   text-align: center;
   gap: 10px;
   width: 100%;
-  height: 400px;
+  min-height: 400px;
   background-color: #133580e5;
-   padding: 100px 5%;
-
+  padding: 100px 5%;
 }
-.main h1{
+
+.main h1 {
   font-size: 3rem;
   font-weight: 600;
   color: white;
 }
-.main p{
+
+.main p {
   max-width: 600px;
   color: rgb(223, 221, 221);
   font-weight: 600;
 }
 
-.btn{
+.btn {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
   align-items: center;
 }
-.btn-text{
+
+.btn-text {
   font-size: 15px;
   color: #e6e3e3;
 }
 
+/* ================= TOOL SECTION ================= */
 
-
-.feature{
+.tool {
   background: rgba(2, 2, 5, 0.829);
-   padding: 100px 5%;
+  padding: 100px 5%;
 }
 
-
-
-.text-center{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-
+.text-center {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
-.heading{
+.heading {
   font-size: 2.2rem;
   font-weight: 600;
   color: white;
 }
 
-
-.text-center .section-sub{
-    max-width: 780px;
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--muted2);
-    text-align: center;
-
+.text-center .section-sub {
+  max-width: 780px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--muted2);
+  text-align: center;
 }
-.features-grid {
+
+.tool-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 380px));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
   margin-top: 4rem;
 }
-.feature-card {
+
+.tool-card {
   background: var(--card);
   border: 1px solid var(--card);
   border-radius: var(--radius);
-  
-
+  width: 100%;
+  min-height: 140px;
 }
 
-.feature-icon {
-  width: 30px; height: 30px;
+.tool-icon {
+  width: 30px;
+  height: 30px;
   background: rgba(73, 87, 207, 0.527);
-  border: 1px solid rgba(79,110,247,0.3);
+  border: 1px solid rgba(79, 110, 247, 0.3);
   color: rgb(244, 245, 248);
   border-radius: 7px;
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.2rem;
   margin-bottom: 16px;
   font-weight: 600;
-  
 }
-.card-submain h1{
 
+.tool-card-submain h1 {
   font-size: 15px;
 }
-.card-submain{
-  margin-top: -10px;
+
+.tool-card-submain {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
-.card-submain h4 {
+
+.tool-card-submain h4 {
   display: inline-block;
   padding: 2px 8px;
   border-radius: 20px;
   font-size: 11px;
   font-weight: 400;
 }
-.sub-main{
+
+.tool-sub-main {
   display: flex;
   flex-direction: row;
   gap: 15px;
 }
-.feature-card p {
+
+.tool-card p {
   color: var(--muted2);
   font-size: 13px;
   font-weight: 600;
-
   line-height: 1.6;
 }
-.feature-main{
-  max-width: 400px;
+
+.tool-main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.feature-card{
-  max-height: 140px;
-  max-width: 360px;
-}
 
+/* ================= MAIN SUB ================= */
 
-
-.main-sub{
+.main-sub {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -143,22 +145,177 @@
   text-align: center;
   gap: 10px;
   width: 100%;
-  height: 350px;
+  min-height: 350px;
   background-color: #133580e5;
-   padding: 100px 5%;
-
+  padding: 100px 5%;
 }
-.main-sub h1{
+
+.main-sub h1 {
   font-size: 3.1rem;
 }
 
-.main-sub p{
-  max-width:600px;
+.main-sub p {
+  max-width: 600px;
 }
-.integ-btn{
+
+.integ-btn {
   padding: 10px 20px;
   background-color: white;
   border-radius: 15px;
   font-weight: 500;
   color: rgb(13, 78, 197);
+}
+
+/* ================= INTEGRATION CARD ================= */
+
+.integration-card .main-sub {
+  min-height: 400px;
+  background-color: var(--card);
+}
+
+.integration-card .main-sub h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.integration-card .main-sub p {
+  max-width: 700px;
+  color: var(--muted2);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.integration-card .main-sub .btn1 {
+  color: skyblue;
+  padding: 3px 12px;
+  border-radius: 20px;
+  background-color: rgba(48, 135, 248, 0.342);
+  display: inline-block;
+}
+
+.integration-card .main-sub .btn1:hover {
+  background-color: rgba(48, 135, 248, 0.342);
+  transform: none;
+  box-shadow: none;
+  cursor: default;
+}
+
+.intig-btn,
+.intig-btn1 {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 400;
+}
+
+.intig-btn {
+  background-color: rgba(64, 64, 233, 0.856);
+  color: white;
+}
+
+.intig-btn1 {
+  border-color: rgba(66, 63, 63, 0.479);
+  background-color: rgba(66, 63, 63, 0.479);
+  color: white;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 992px) {
+  .main h1,
+  .main-sub h1 {
+    font-size: 2.5rem;
+  }
+
+  .integration-card .main-sub h1 {
+    font-size: 2rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .main,
+  .main-sub,
+  .integration-card .main-sub {
+    min-height: auto;
+    padding: 80px 20px;
+  }
+
+  .main h1,
+  .main-sub h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .integration-card .main-sub h1 {
+    font-size: 1.8rem;
+  }
+
+  .main p,
+  .main-sub p,
+  .integration-card .main-sub p {
+    font-size: 15px;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .text-center .section-sub {
+    font-size: 15px;
+  }
+
+  .tool-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tool-sub-main {
+    gap: 12px;
+  }
+
+  .btn {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .integ-btn,
+  .intig-btn,
+  .intig-btn1 {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
+
+/* ================= SMALL PHONES ================= */
+
+@media (max-width: 480px) {
+  .main h1,
+  .main-sub h1 {
+    font-size: 1.7rem;
+  }
+
+  .integration-card .main-sub h1 {
+    font-size: 1.5rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .tool-card-submain h1 {
+    font-size: 14px;
+  }
+
+  .tool-card p {
+    font-size: 12px;
+  }
+
+  .integration-card .main-sub .btn1 {
+    font-size: 13px;
+  }
 }

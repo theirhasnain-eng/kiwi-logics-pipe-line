@@ -123,43 +123,53 @@ export default function Integrations() {
                </div>
              </div>
            </section>
-            <section className="feature" id="feature">
+            <section className="tool" id="tool">
       <div className="text-center">
 
         <div className="heading">Works With Your Stack</div>
         <p className="section-sub">From email and calendar to marketing automation and payments, PipelineIQ integrates with the tools your team relies on every day.</p>
       </div>
-      <div className="features-grid">
+      <div className="tool-grid">
         {integration.map((f, i) => (
           <div
             key={f.title}
-            className="feature-card reveal"
+            className="tool-card reveal"
             ref={el => cardsRef.current[i] = el}
             style={{ transitionDelay: `${i * 80}ms` }}
           >
-            <div className="feature-main">
-              <div className="sub-main">
-            <div className="feature-icon">{f.icon}</div>
-            <div className="card-submain">
+            <div className="tool-main">
+              <div className="tool-sub-main">
+            <div className="tool-icon">{f.icon}</div>
+            <div className="tool-card-submain">
               <h1>{f.title}</h1>
               <h4 style={{ backgroundColor: f.color }}>
                   {f.btn}
               </h4>
             </div>
             </div>
-            <p className='feature-p'>{f.desc}</p>
+            <p className='tool-p'>{f.desc}</p>
             </div>
           </div>
         ))}
       </div>
             </section>
-
+                    <section className="integration-card">
+             <div className="main-sub">
+              <p className='btn1'>Developer API</p>
+               <h1>Build Custom Integrations</h1>
+               <p>Our RESTful API and webhooks make it easy to connect PipelineIQ with any custom tool or internal system your team uses.</p>
+               <div className="btn">
+                 <Link to="/contact" className="intig-btn">View API Docs</Link>
+                 <Link to="/contact" className="intig-btn1">Talk to Engineering</Link>
+               </div>
+             </div>
+           </section>
             <section className="contact-hero">
              <div className="main-sub">
                <h1>Don't See Your Tool?</h1>
                <p>We're constantly adding new integrations. Let us know what tools you need and we'll prioritize them.</p>
                <div className="btn">
-                 <Link to="/integrations" className="integ-btn">Request Integration</Link>
+                 <Link to="/contact" className="integ-btn">Request Integration</Link>
                </div>
              </div>
            </section>
