@@ -5,6 +5,10 @@ import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import missionImg from '../assets/mission.jpg'
 import { RiShieldCheckLine} from 'react-icons/ri';
+import person1 from '../assets/alex.png'
+import person2 from '../assets/priya.png'
+import person3 from '../assets/kim.png'
+import person4 from '../assets/maya.png'
 
 
 
@@ -26,6 +30,29 @@ const values = [
     desc: "Your success is our success. We measure our performance by the deals you close, the revenue you generate, and the relationships you build."
   },
 ]
+
+const team = [
+  {
+    image: person1,
+    name: "Alex Rivera",
+    role: "CEO & Co-Founder",
+  },
+  {
+    image: person2,
+    name: "Priya Sharma",
+    role: "CTO & Co-Founder",
+  },
+   {
+    image: person3,
+    name: "Jordan Kim",
+    role: "VP of Product",
+  },
+   {
+    image: person4,
+    name: "Head of Customer Success",
+    role: "CTO & Co-Founder",
+  },
+];
 
 export default function About() {
    const cardsRef = useRef([])
@@ -96,6 +123,24 @@ export default function About() {
         ))}
       </div>
           </section>
+          <section className="team-section">
+                 <div className="team-heading">
+                    <h1>Meet Our Team</h1>
+                    <p>The people building the future of CRM.</p>
+                  </div>
+
+                  <div className="team-grid">
+                     {team.map((member, index) => (
+                      <div className="team-card" key={index}>
+                      <img src={member.image} alt={member.name} />
+                     <h3>{member.name}</h3>
+                      <p>{member.role}</p>
+                      </div>
+                        ))}
+                     </div>
+  
+               </section>
+
 
           <section className="contact-hero">
             <div className="main " id='team'>

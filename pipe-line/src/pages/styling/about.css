@@ -1,6 +1,4 @@
-
-
-.main{
+.main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,67 +6,71 @@
   text-align: center;
   gap: 10px;
   width: 100%;
-  height: 450px;
+  min-height: 450px;
   background-color: #133580e5;
-   padding: 100px 5%;
-
+  padding: 100px 5%;
 }
-.main h1{
+
+.main h1 {
   padding-top: 70px;
   font-size: 3.1rem;
   font-weight: 600;
   color: white;
 }
-.main p{
+
+.main p {
   max-width: 600px;
   color: #e6e3e3;
   font-weight: 600;
 }
 
-.btn{
+.btn {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
   align-items: center;
 }
-.btn-text{
+
+.btn-text {
   font-size: 15px;
   color: #e6e3e3;
 }
 
-#team h1{
-    font-size: 2.3rem;
-    font-weight: 700;
+#team h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
 }
 
-.team-btn{
-    padding: 10px 20px;
-    border-radius: 15px;
-    color: rgb(32, 178, 236);
-    background-color: rgba(255, 255, 255, 0.911);
+.team-btn {
+  padding: 10px 20px;
+  border-radius: 15px;
+  color: rgb(32, 178, 236);
+  background-color: rgba(255, 255, 255, 0.911);
 }
 
-.mission-main{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 100px 0%;
-    gap: 20px;
+/* ================= MISSION SECTION ================= */
+
+.mission-main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 5%;
+  gap: 40px;
   width: 100%;
   min-height: 700px;
   background-color: rgba(8, 5, 5, 0.747);
-
 }
 
-.main-left{
-    max-width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 10px;
-    padding: 60px;
+.main-left {
+  flex: 1;
+  min-width: 300px;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-
 
 .main-left h5 {
   display: inline-block;
@@ -78,70 +80,244 @@
   border-radius: 20px;
   font-size: 14px;
   font-weight: 500;
-   background-color: rgba(20, 104, 214, 0.541);
-}
-.main-left h1{
-    line-height: 40px;
-    max-width: 500px;
-    min-width: 400px;
-}
-.main-left span{
-    color: skyblue;
-    font-weight: 700;
-}
-.main-left p{
-   color: var(--muted);
-   font-weight: 600;
-   min-width: 400px;
+  background-color: rgba(20, 104, 214, 0.541);
 }
 
+.main-left h1 {
+  line-height: 1.3;
+  font-size: 2.5rem;
+}
+
+.main-left span {
+  color: skyblue;
+  font-weight: 700;
+}
+
+.main-left p {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.main-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
 
 .main-right img {
-     width: 100%;
-    max-width: 550px;
-    object-fit: cover;
-    display: block;
-    margin-top: 25px;
-    height: 450px;
-    border-radius: 20px;
-    overflow: hidden;
+  width: 100%;
+  max-width: 550px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+/* ================= VALUES SECTION ================= */
+
+.value {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 600px;
+  padding: 100px 5%;
+}
+
+.value-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.value-text p {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--muted);
 }
 
 #value-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 30px;
-  
 }
 
-.value{
-    display: flex;
+.value-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  padding: 25px;
+  border-radius: 20px;
+  background: var(--card);
+}
+
+/* ================= TEAM SECTION ================= */
+
+.team-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  min-height: 500px;
+  padding: 100px 5%;
+  background-color: rgba(8, 5, 5, 0.747);
+}
+
+.team-heading {
+  text-align: center;
+}
+
+.team-heading h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+.team-heading p {
+  color: #94a3b8;
+  margin-top: 10px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 100px;
+  justify-content: center;
+}
+
+.team-card {
+  text-align: center;
+}
+
+.team-card img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-card h3 {
+  margin-top: 20px;
+  color: white;
+  font-size: 1rem;
+}
+
+.team-card p {
+  color: #94a3b8;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 992px) {
+  .main h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-left h1,
+  .value-text h1,
+  .team-heading h1 {
+    font-size: 2.2rem;
+  }
+
+  #value-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .main {
+    min-height: auto;
+    padding: 80px 20px;
+  }
+
+  .main h1 {
+    font-size: 2rem;
+    padding-top: 30px;
+  }
+
+  .main p {
+    font-size: 15px;
+  }
+
+  .btn {
     flex-direction: column;
+  }
+
+  .mission-main {
+    flex-direction: column;
+    padding: 80px 20px;
+  }
+
+  .main-left {
+    min-width: 100%;
+  }
+
+  .main-left h1 {
+    font-size: 2rem;
+  }
+
+  .main-right img {
+    height: 320px;
+  }
+
+  #value-grid {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .value-text h1,
+  .team-heading h1 {
+    font-size: 2rem;
+  }
+
+  .value-text p {
+    font-size: 15px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
     gap: 40px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 600px;
+  }
+
+  .team-card img {
+    width: 140px;
+    height: 140px;
+  }
 }
-.value-text h1{
-    font-size: 3rem;
-    font-weight: 700;
-}
-.value-text p{
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--muted);
-}
-.value-card{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: left;
-    max-height: 260px;
-}
-.icon{
-    /* padding: 8px 12px; */
+
+/* ================= SMALL PHONES ================= */
+
+@media (max-width: 480px) {
+  .main h1,
+  .main-left h1,
+  .value-text h1,
+  .team-heading h1 {
+    font-size: 1.7rem;
+  }
+
+  .main-right img {
+    height: 250px;
+  }
+
+  .team-card img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .value-card {
+    padding: 20px;
+  }
 }
