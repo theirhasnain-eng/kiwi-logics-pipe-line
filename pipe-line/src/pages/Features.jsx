@@ -233,7 +233,7 @@ export default function Features() {
                   <h1>Ready to Transform Your Sales?</h1>
                   <p >Start your 14-day free trial and see why 10,000+ sales teams trust PipelineIQ to close more deals.</p>
                   <div className="btn">
-                    <Link to="/" className="sale-btn">Start Free Trail</Link>
+                    <Link to="/pricing" className="sale-btn">Start Free Trail</Link>
                     <Link to="/contact" className="sale-btn1">Book a Demo</Link>
                   </div>
                 </div>

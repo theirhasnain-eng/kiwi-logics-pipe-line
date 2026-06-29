@@ -59,7 +59,7 @@ export default function Contact() {
                 <label>Full Name</label>
                 <input
                   type="text"
-                  placeholder="John Doe"
+                  placeholder="Hasnain"
                   required
                 />
               </div>
@@ -68,7 +68,7 @@ export default function Contact() {
                 <label>Work Email</label>
                 <input
                   type="email"
-                  placeholder="john@company.com"
+                  placeholder="hasnain@company.com"
                   required
                 />
               </div>
