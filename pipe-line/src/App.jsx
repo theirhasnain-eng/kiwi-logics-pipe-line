@@ -7,12 +7,16 @@ import Features from './pages/Features';
 import Contact from './pages/Contact';
 import Integrations from './pages/Integrations';
 import Blog from './pages/Blog';
+import Article from './pages/Article';
+import Navebar from './components/Navebar';
+import Footer from './components/Footer';
 
 
 
 export default function App() {
   return (
     <>
+      <Navebar/>
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/features" element={<Features />} />
@@ -21,7 +25,9 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/blog/:slug" element={<Article />} />
       </Routes>
+      <Footer/>
     </>
   );
 }

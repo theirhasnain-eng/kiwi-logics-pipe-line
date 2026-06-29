@@ -25,7 +25,7 @@ export default function Contact() {
 
   return (
     <>
-    <Navebar/>
+    
     <section className="contact-hero">
       <div className="main">
         <h1>Contact Us</h1>
@@ -177,7 +177,7 @@ export default function Contact() {
     title="Office Location"
   />
 </div>
-    <Footer/>
+   
     </>
   );
 }

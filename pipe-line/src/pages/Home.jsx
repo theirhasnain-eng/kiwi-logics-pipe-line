@@ -12,7 +12,7 @@ export default function Home() {
   
   return(
     <>
-    <Navebar/>
+    
     <Hero/>
     <Stats/>
     <Feature/>
@@ -20,7 +20,7 @@ export default function Home() {
     <Contact/>
     <FAQ/>
     <CTABand/>
-    <Footer/>
+    
   
     </>
   ) ;

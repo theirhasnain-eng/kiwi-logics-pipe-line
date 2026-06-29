@@ -1,4 +1,5 @@
 import './styling/footer.css'
+import { Link } from 'react-router-dom';
 import {
   FaSun,
   FaMoon,
@@ -33,18 +34,49 @@ function Footer(){
             </div>
         </div>
 
-        {[
-          { title: 'Product', links: ['Pipeline', 'Contacts', 'Analytics', 'Automation'] },
-          { title: 'Company', links: ['About', 'Careers', 'Blog', 'Press'] },
-          { title: 'Support', links: ['Help Center', 'API Docs', 'Status', 'Contact'] },
-        ].map(col => (
-          <div className="footer-col" key={col.title}>
-            <h4>{col.title}</h4>
-            <ul>
-              {col.links.map(l => <li key={l}><a href="#">{l}</a></li>)}
-            </ul>
-          </div>
-        ))}
+{[
+  {
+    title: "Product",
+    links: [
+      { name: "Pipeline", path: "/features" },
+      { name: "Contacts", path: "/features" },
+      { name: "Analytics", path: "/integrations" },
+      { name: "Automation", path: "/features" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { name: "About", path: "/about" },
+      { name: "Careers", path: "/contact" },
+      { name: "Blog", path: "/blog" },
+      { name: "Press", path: "/pricing" },
+    ],
+  },
+  {
+    title: "Support",
+    links: [
+      { name: "Help Center", path: "/contact" },
+      { name: "API Docs", path: "/features" },
+      { name: "Status", path: "/pricing" },
+      { name: "Contact", path: "/contact" },
+    ],
+  },
+].map((col) => (
+  <div className="footer-col" key={col.title}>
+    <h4>{col.title}</h4>
+
+    <ul>
+      {col.links.map((link) => (
+        <li key={link.name}>
+          <Link to={link.path}>
+            {link.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </div>
+))}
       </div>
 
       <div className="footer-bottom">
@@ -52,6 +84,7 @@ function Footer(){
         <div className="footer-legal">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
+          <a href="#">Style Guide</a>
         </div>
       </div>
     </footer>

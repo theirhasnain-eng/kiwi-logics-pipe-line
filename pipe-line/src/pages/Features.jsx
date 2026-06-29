@@ -38,7 +38,7 @@ const deals= [
 export default function Features() {
   return (
     <main className="page-section">
-      <Navebar/>
+     
           <section className="contact-hero">
             <div className="main">
               <h1>Platform Features</h1>
@@ -238,7 +238,7 @@ export default function Features() {
                   </div>
                 </div>
               </section>  
-      <Footer/>
+      
     </main>
   );
 }

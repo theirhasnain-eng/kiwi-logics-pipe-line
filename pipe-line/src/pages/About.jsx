@@ -5,10 +5,8 @@ import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import missionImg from '../assets/mission.jpg'
 import { RiShieldCheckLine} from 'react-icons/ri';
-import person1 from '../assets/alex.png'
-import person2 from '../assets/priya.png'
-import person3 from '../assets/kim.png'
-import person4 from '../assets/maya.png'
+import { person1, person2, person3, person4 } from '../assets'
+
 
 
 
@@ -154,7 +152,6 @@ export default function About() {
           </section>
 
     
-    <Footer/>
     </main>
   );
 }

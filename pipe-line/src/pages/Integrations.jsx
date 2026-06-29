@@ -111,7 +111,7 @@ export default function Integrations() {
     }, [])
   return (
     <main className="page-section">
-      <Navebar/>
+      
            <section className="contact-hero">
              <div className="main">
                <h1>Integrations</h1>
@@ -174,7 +174,7 @@ export default function Integrations() {
              </div>
            </section>
 
-      <Footer/>
+      
     </main>
   );
 }

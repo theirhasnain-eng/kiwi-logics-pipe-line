@@ -9,7 +9,7 @@ export default function Pricing() {
   return (
     <main className="page-section">
 
-      <Navebar/>
+     
       <section className="contact-hero">
                   <div className="main">
                     <h1>Pricing</h1>
@@ -189,7 +189,7 @@ export default function Pricing() {
               </section>  
 
 
-      <Footer/>
+      
     </main>
   );
 }
