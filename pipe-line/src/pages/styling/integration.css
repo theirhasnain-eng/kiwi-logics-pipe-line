@@ -7,20 +7,20 @@
   gap: 10px;
   width: 100%;
   min-height: 400px;
-  background-color: #133580e5;
+  background: var(--page-hero-bg);
   padding: 100px 5%;
 }
 
 .main h1 {
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 800;
   color: white;
 }
 
 .main p {
   max-width: 600px;
-  color: rgb(223, 221, 221);
-  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
 }
 
 .btn {
@@ -33,14 +33,13 @@
 
 .btn-text {
   font-size: 15px;
-  color: #e6e3e3;
+  color: rgba(255, 255, 255, 0.85);
 }
 
-/* ================= TOOL SECTION ================= */
-
 .tool {
-  background: rgba(2, 2, 5, 0.829);
+  background: var(--bg-alt);
   padding: 100px 5%;
+  transition: background 0.3s ease;
 }
 
 .text-center {
@@ -52,16 +51,16 @@
 }
 
 .heading {
-  font-size: 2.2rem;
-  font-weight: 600;
-  color: white;
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: var(--text);
 }
 
 .text-center .section-sub {
-  max-width: 780px;
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--muted2);
+  max-width: 640px;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--muted);
   text-align: center;
 }
 
@@ -69,41 +68,50 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   justify-content: center;
-  gap: 20px;
+  gap: 28px;
   margin-top: 4rem;
 }
 
 .tool-card {
   background: var(--card);
-  border: 1px solid var(--card);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   width: 100%;
   min-height: 140px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.tool-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
 }
 
 .tool-icon {
-  width: 30px;
-  height: 30px;
-  background: rgba(73, 87, 207, 0.527);
-  border: 1px solid rgba(79, 110, 247, 0.3);
-  color: rgb(244, 245, 248);
-  border-radius: 7px;
+  width: 54px;
+  height: 54px;
+  background: var(--bg-alt);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: 16px;
+  color: var(--primary);
   font-weight: 600;
 }
 
 .tool-card-submain h1 {
   font-size: 15px;
+  color: var(--text);
 }
 
 .tool-card-submain {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 20px;
   align-items: flex-start;
 }
 
@@ -122,22 +130,19 @@
 }
 
 .tool-card p {
-  color: var(--muted2);
-  font-size: 13px;
-  font-weight: 600;
+  color: var(--muted);
+  font-size: 0.95rem;
   line-height: 1.6;
 }
 
 .tool-main {
-  padding: 20px;
+  padding: 28px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/* ================= MAIN SUB ================= */
-
-.main-sub {
+.integ-hero .main-sub {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -146,96 +151,122 @@
   gap: 10px;
   width: 100%;
   min-height: 350px;
-  background-color: #133580e5;
+  background: var(--page-hero-bg);
   padding: 100px 5%;
 }
 
-.main-sub h1 {
-  font-size: 3.1rem;
+.integ-hero .main-sub h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: white;
 }
 
-.main-sub p {
-  max-width: 600px;
+.integ-hero .main-sub p {
+  max-width: 560px;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .integ-btn {
-  padding: 10px 20px;
+  padding: 14px 28px;
   background-color: white;
-  border-radius: 15px;
-  font-weight: 500;
-  color: rgb(13, 78, 197);
+  border-radius: 10px;
+  font-weight: 600;
+  color: var(--primary);
+  transition: transform 0.2s;
 }
 
-/* ================= INTEGRATION CARD ================= */
+.integ-btn:hover {
+  transform: translateY(-2px);
+}
 
-.integration-card .main-sub {
+.integration-card {
   min-height: 400px;
-  background-color: var(--card);
+  background-color: var(--page-hero-bg);
+  padding: 100px 0%;
+}
+.integration-card .main-sub {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .integration-card .main-sub h1 {
   font-size: 2.2rem;
-  font-weight: 700;
+  font-weight: 800;
+  color: var(--text);
 }
 
 .integration-card .main-sub p {
-  max-width: 700px;
-  color: var(--muted2);
-  font-size: 1.1rem;
-  font-weight: 500;
+  max-width: 640px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  font-weight: 400;
 }
 
 .integration-card .main-sub .btn1 {
-  color: skyblue;
-  padding: 3px 12px;
-  border-radius: 20px;
-  background-color: rgba(48, 135, 248, 0.342);
+  color: var(--badge-color);
+  padding: 8px 16px;
+  border-radius: 30px;
+  background-color: rgba(101, 101, 255, 0.911);
   display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 0.08em;
 }
 
 .integration-card .main-sub .btn1:hover {
-  background-color: rgba(48, 135, 248, 0.342);
   transform: none;
   box-shadow: none;
   cursor: default;
 }
-
+.integration-card .btn {
+  display: flex;
+  gap: 20px;
+}
 .intig-btn,
 .intig-btn1 {
-  padding: 10px 20px;
+  padding: 14px 28px;
   border-radius: 10px;
-  font-weight: 400;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s;
 }
 
 .intig-btn {
-  background-color: rgba(64, 64, 233, 0.856);
+  background-color: var(--primary);
   color: white;
+}
+
+.intig-btn:hover {
+  background: var(--primary-dark);
 }
 
 .intig-btn1 {
-  border-color: rgba(66, 63, 63, 0.479);
-  background-color: rgba(66, 63, 63, 0.479);
-  color: white;
+  border: 1px solid var(--border);
+  background-color: var(--btn-secondary-bg);
+  color: var(--text);
 }
 
-/* ================= TABLET ================= */
+.intig-btn1:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
 
 @media (max-width: 992px) {
   .main h1,
   .main-sub h1 {
     font-size: 2.5rem;
   }
-
   .integration-card .main-sub h1 {
     font-size: 2rem;
   }
-
   .heading {
     font-size: 2rem;
   }
 }
-
-/* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
   .main,
@@ -250,38 +281,30 @@
     font-size: 2rem;
     line-height: 1.3;
   }
-
   .integration-card .main-sub h1 {
     font-size: 1.8rem;
   }
-
   .main p,
   .main-sub p,
   .integration-card .main-sub p {
     font-size: 15px;
   }
-
   .heading {
     font-size: 1.8rem;
   }
-
   .text-center .section-sub {
     font-size: 15px;
   }
-
   .tool-grid {
     grid-template-columns: 1fr;
   }
-
   .tool-sub-main {
     gap: 12px;
   }
-
   .btn {
     flex-direction: column;
     width: 100%;
   }
-
   .integ-btn,
   .intig-btn,
   .intig-btn1 {
@@ -291,31 +314,21 @@
   }
 }
 
-/* ================= SMALL PHONES ================= */
-
 @media (max-width: 480px) {
   .main h1,
   .main-sub h1 {
     font-size: 1.7rem;
   }
-
   .integration-card .main-sub h1 {
     font-size: 1.5rem;
   }
-
   .heading {
     font-size: 1.5rem;
   }
-
   .tool-card-submain h1 {
     font-size: 14px;
   }
-
   .tool-card p {
-    font-size: 12px;
-  }
-
-  .integration-card .main-sub .btn1 {
     font-size: 13px;
   }
 }

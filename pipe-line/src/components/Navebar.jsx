@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { FaSun, FaMoon } from 'react-icons/fa'
+import { applyTheme, getInitialTheme } from '../utils/theme'
 import './styling/navebar.css'
 
 export default function Navebar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-  const [darkMode, setDarkMode] = useState(true)
+  const [darkMode, setDarkMode] = useState(() => getInitialTheme() === 'dark')
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)
@@ -15,9 +16,21 @@ export default function Navebar() {
   }, [])
 
   useEffect(() => {
-    document.body.classList.toggle('light-mode', !darkMode)
+    applyTheme(darkMode ? 'dark' : 'light')
   }, [darkMode])
 
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-color-scheme: dark)')
+    const onChange = (e) => {
+      if (!localStorage.getItem('theme')) {
+        setDarkMode(e.matches)
+      }
+    }
+    mq.addEventListener('change', onChange)
+    return () => mq.removeEventListener('change', onChange)
+  }, [])
+
+  const toggleTheme = () => setDarkMode(d => !d)
   const closeMenu = () => setMenuOpen(false)
   const toggleMenu = () => setMenuOpen(o => !o)
 
@@ -39,10 +52,10 @@ export default function Navebar() {
         </ul>
 
         <div className="nav-cta">
-
           <button
             className="theme-btn"
-            onClick={() => setDarkMode(!darkMode)}
+            onClick={toggleTheme}
+            aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
           >
             {darkMode ? <FaSun /> : <FaMoon />}
           </button>
@@ -68,6 +81,11 @@ export default function Navebar() {
         <Link to="/about" onClick={closeMenu}>About</Link>
         <Link to="/blog" onClick={closeMenu}>Blog</Link>
         <Link to="/contact" onClick={closeMenu}>Contact</Link>
+
+        <button className="theme-btn mobile-theme-btn" onClick={toggleTheme}>
+          {darkMode ? <FaSun /> : <FaMoon />}
+          {darkMode ? ' Light Mode' : ' Dark Mode'}
+        </button>
 
         <Link
           to="/contact"

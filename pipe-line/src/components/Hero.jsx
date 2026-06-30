@@ -41,7 +41,7 @@ function Hero(){
         <div className="hero-btns">
               <Link to="/contact" className="custom-btn btn1">Start Free Trial →</Link>
               <Link to="/contact" className="custom-btn btn2">
-               <FaBook style={{ marginRight: "8px ", color:"blue" }} />
+               <FaBook style={{ marginRight: "8px", color: "var(--primary)" }} />
               Book a Demo
                  </Link>
         </div>

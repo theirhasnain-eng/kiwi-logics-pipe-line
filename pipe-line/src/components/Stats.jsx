@@ -5,7 +5,7 @@ const stats = [
   { target: 10000, suffix: 'K+', divisor: 1000, label: 'Teams Worldwide', prefix: '' },
   { target: 50, suffix: 'M+', divisor: 1, label: 'Deals Tracked', prefix: '' },
   { target: 99.9, suffix: '%', divisor: 1, label: 'Uptime SLA', prefix: '', isFloat: true },
-  { target: 2.4, suffix: 'M', divisor: 1, label: 'Revenue Generated', prefix: '$', isFloat: true },
+  { target: 2.1, suffix: 'B', divisor: 1, label: 'Revenue Generated', prefix: '$', isFloat: true },
 ]
 
 function Counter({ target, suffix, divisor, prefix, isFloat }) {

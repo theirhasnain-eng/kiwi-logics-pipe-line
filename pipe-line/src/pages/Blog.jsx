@@ -47,8 +47,8 @@ export default function Blog() {
         </p>
 
         <div className="breadcrumb">
-          <Link to="/">Home</Link>/
-          <Link to="/blog" className='blog'>Blog</Link>
+          <Link to="/" className='breadcrumb-text'>Home  /  </Link>
+          <Link to="/blog" className='breadcrumb-blog'>Blog</Link>
         </div>
       </section>
 

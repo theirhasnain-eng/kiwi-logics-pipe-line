@@ -1,6 +1,4 @@
-
-
-.main{
+.main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,41 +7,42 @@
   gap: 10px;
   width: 100%;
   height: 450px;
-  background-color: #133580e5;
-   padding: 100px 5%;
-
+  background: var(--page-hero-bg);
+  padding: 100px 5%;
 }
-.main h1{
+
+.main h1 {
   padding-top: 70px;
   font-size: 3.1rem;
-  font-weight: 600;
+  font-weight: 800;
   color: white;
 }
-.main p{
+
+.main p {
   max-width: 600px;
-  color: #e6e3e3;
-  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
 }
 
-.btn{
+.btn {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
   align-items: center;
 }
-.btn-text{
-  font-size: 15px;
-  color: #e6e3e3;
-}
 
+.btn-text {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+}
 
 .contact {
-  background: #020817;
-  /* padding: 100px 5%; */
+  background: var(--bg);
+  transition: background 0.3s ease;
 }
 
-.contact-left h2{
+.contact-left h2 {
   font-size: 15px;
 }
 
@@ -52,18 +51,19 @@
   grid-template-columns: 1.6fr 1fr;
   gap: 50px;
   margin-bottom: 60px;
+  padding: 0 5%;
 }
 
 .contact-left h2,
 .contact-right h2 {
-  color: #fff;
+  color: var(--text);
   font-size: 30px;
   margin-bottom: 16px;
 }
 
 .contact-left p,
 .contact-right p {
-  color: #94a3b8;
+  color: var(--muted);
   font-size: 18px;
   line-height: 1.7;
   margin-bottom: 40px;
@@ -72,40 +72,44 @@
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 18px;
 }
 
 .form-group {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .form-group label {
   display: block;
-  color: white;
+  color: var(--text);
   font-weight: 600;
-  margin-bottom: 10px;
+  font-size: 0.88rem;
+  margin-bottom: 6px;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  background: #1e293b;
-  border: 1px solid #334155;
-  border-radius: 10px;
-  padding: 18px;
-  color: white;
-  font-size: 15px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: var(--input-text);
+  font-size: 0.95rem;
   outline: none;
+  font-family: inherit;
+  transition: border-color 0.2s, outline 0.2s;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #94a3b8;
+  color: var(--muted);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #2563eb;
+  outline: 2px solid var(--primary);
+  border-color: var(--primary);
 }
 
 .form-group textarea {
@@ -114,24 +118,26 @@
 }
 
 .submit-btn {
-  background: #2563eb;
+  background: var(--primary);
   border: none;
   color: white;
-  padding: 18px 36px;
+  padding: 14px 28px;
   border-radius: 10px;
-  font-size: 17px;
+  font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 15px 35px rgba(37,99,235,0.35);
+  transition: background 0.2s, transform 0.2s;
 }
 
 .submit-btn:hover {
-  background: #3b82f6;
+  background: var(--primary-dark);
+  transform: translateY(-2px);
 }
 
 .form-success {
-  margin-top: 20px;
-  color: #10b981;
+  margin-top: 14px;
+  color: var(--green);
+  font-weight: 600;
 }
 
 .contact-right {
@@ -145,11 +151,11 @@
 }
 
 .info-icon {
-  width: 42px;
-  height: 42px;
-  background: #112b66;
-  border-radius: 12px;
-  color: #60a5fa;
+  width: 48px;
+  height: 48px;
+  background: var(--bg-alt);
+  border-radius: var(--radius);
+  color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,26 +163,26 @@
 }
 
 .info-block h4 {
-  color: white;
+  color: var(--text);
   margin-bottom: 5px;
-  font-size: 24px;
+  font-size: 0.95rem;
 }
 
 .info-block p {
   margin: 0;
-  color: #cbd5e1;
-  font-size: 17px;
+  color: var(--muted);
+  font-size: 0.92rem;
 }
 
 .info-block div h4 {
-  font-size: 18px !important;
+  font-size: 0.95rem !important;
 }
 
 .full-map {
   width: 100%;
   max-height: 300px;
- 
   overflow: hidden;
+  border-radius: var(--radius);
 }
 
 .full-map iframe {
@@ -184,15 +190,7 @@
 }
 
 @media (max-width: 992px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .full-map iframe {
-    height: 350px;
-  }
+  .contact-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .full-map iframe { height: 350px; }
 }

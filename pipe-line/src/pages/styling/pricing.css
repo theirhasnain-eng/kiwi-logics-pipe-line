@@ -4,38 +4,50 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 100px 0%;
-  background-color: #020817;
+  padding: 100px 5%;
+  background-color: var(--bg);
   gap: 20px;
+  transition: background 0.3s ease;
 }
+
 .plan-main {
   display: flex;
-  display: inline;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 20px;
 }
 
 .plan-main h3 {
   display: inline-block;
-  font-size: 15px;
-  font-weight: 500;
-  padding: 5px 15px;
-  border-radius: 20px;
-  background-color: #2443888c;
-  color: #5084f5cc;
+  font-size: 0.8rem;
+  font-weight: 700;
+  width: fit-content;
+  letter-spacing: 0.08em;
+  padding: 8px 16px;
+  border-radius: 30px;
+  background-color: var(--badge-bg);
+  color: var(--badge-color);
 }
+
 .plan-main h1 {
   font-size: 2.3rem;
+  font-weight: 800;
+  color: var(--text);
 }
+
 .plan-main h5 {
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.05rem;
+  font-weight: 400;
   color: var(--muted);
 }
+
 .main-p {
   padding-top: 30px;
   font-size: 14px;
+  color: var(--muted);
 }
+
 .plan-submain {
   display: flex;
   justify-content: center;
@@ -46,21 +58,26 @@
 }
 
 .plan-card {
-  width: 390px;
-  height: 600px;
-  background: #09111f;
-  border: 1px solid #1b2942;
-  border-radius: 24px;
+  width: 370px;
+  min-height: 550px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   padding: 34px 32px;
-
   display: flex;
   flex-direction: column;
-
   position: relative;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.plan-card:hover {
+  box-shadow: var(--shadow);
 }
 
 .plan-card h2 {
-  color: #fff;
+  color: var(--text);
   text-align: center;
   font-size: 22px;
   font-weight: 700;
@@ -68,7 +85,7 @@
 }
 
 .plan-card p {
-  color: #94a3b8;
+  color: var(--muted);
   text-align: center;
   font-size: 15px;
   line-height: 1.5;
@@ -77,15 +94,15 @@
 
 .plan-card h1 {
   font-size: 40px;
-  font-weight: 700;
-  color: white;
+  font-weight: 800;
+  color: var(--text);
   text-align: center;
   line-height: 1;
   margin-bottom: 10px;
 }
 
 .plan-card h6 {
-  color: #94a3b8;
+  color: var(--muted);
   text-align: center;
   font-size: 14px;
   font-weight: 400;
@@ -103,51 +120,60 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  color: white;
+  color: var(--text);
   font-size: 16px;
 }
 
 .check-icon {
-  color: #3b82f6;
+  color: var(--primary);
   font-size: 15px;
   flex-shrink: 0;
 }
 
 .cross-icon {
-  color: #64748b;
+  color: var(--muted);
   font-size: 15px;
   flex-shrink: 0;
 }
 
 .disable {
-  color: #64748b;
+  color: var(--muted);
 }
 
 .plan-card button {
   margin-top: auto;
   width: 100%;
   height: 48px;
-  border: none;
-  border-radius: 12px;
-  background: #374151;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-alt);
   cursor: pointer;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
 }
 
 .plan-card button a {
-  color: white;
+  color: var(--text);
   text-decoration: none;
-  font-size: 18px;
+  font-size: 0.95rem;
   font-weight: 600;
 }
 
 .active-card {
-  border: 2px solid #2563eb;
-  background: #151f31;
+  border: 2px solid var(--primary);
+  background: var(--card);
   transform: translateY(-12px);
+  box-shadow: var(--shadow);
 }
 
 .active-card button {
-  background: #2563eb;
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.active-card button a {
+  color: white;
 }
 
 .badge {
@@ -155,16 +181,32 @@
   top: -14px;
   left: 50%;
   transform: translateX(-50%);
-  background: #2563eb;
+  background: var(--primary);
   color: white;
   padding: 7px 22px;
   border-radius: 50px;
   font-size: 14px;
   font-weight: 600;
 }
+.main h1 {
+  color: white !important;
+}
 
 #plan-btn {
   border-radius: 50px;
+}
+#sale .btn {
+  display: flex;
+  gap: 20px;
+}
+#sale .sale-btn {
+  background-color: white;
+  color: blue;
+}
+#sale .sale-btn1 {
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
 }
 
 @media (max-width: 1200px) {
@@ -200,7 +242,6 @@
   .plan-card h1 {
     font-size: 56px;
   }
-
   .plan-item {
     font-size: 15px;
   }

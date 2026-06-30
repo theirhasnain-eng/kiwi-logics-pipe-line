@@ -1,5 +1,5 @@
 import './styling/about.css';
-import { useEffect,useRef } from 'react';
+
 import Navebar from '../components/Navebar';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
@@ -53,16 +53,7 @@ const team = [
 ];
 
 export default function About() {
-   const cardsRef = useRef([])
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') }),
-      { threshold: 0.1 }
-    )
-    cardsRef.current.forEach(c => c && observer.observe(c))
-    return () => observer.disconnect()
-  }, [])
   return (
     
     <main className="page-section">
@@ -72,8 +63,7 @@ export default function About() {
               <h1>About PipelineIQ</h1>
               <p>Founded in 2020, we're on a mission to democratize CRM and make world-class sales tools accessible to every team.</p>
               <div className="btn">
-                <Link to="/" className="btn-text">Home</Link>
-                <div>/</div>
+                <Link to="/" className="btn-text">Home  /  </Link>
                 <Link to="/about" className="btn-text">About</Link>
               </div>
             </div>
@@ -111,7 +101,6 @@ export default function About() {
           <div
             key={f.title}
             className="feature-card reveal value-card"
-            ref={el => cardsRef.current[i] = el}
             style={{ transitionDelay: `${i * 80}ms` }}
           >
             <div className="feature-icon icon">{f.icon}</div>

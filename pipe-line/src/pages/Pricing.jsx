@@ -15,8 +15,8 @@ export default function Pricing() {
                     <h1>Pricing</h1>
                     <p>Simple, transparent pricing for every team size. Start free and scale as you grow.</p>
                     <div className="btn">
-                      <Link to="/" className="btn-text">Home</Link>
-                      <div>/</div>
+                      <Link to="/" className="btn-text">Home  /  </Link>
+                      
                       <Link to="/pricing" className="btn-text">Pricing</Link>
                     </div>
                   </div>
@@ -179,7 +179,7 @@ export default function Pricing() {
                 <FAQ/>
                 <section className="contact-hero">
                 <div className="main" id='sale'>
-                  <h1>Ready to Close More Deals?</h1>
+                  <h1 className='sale-h1'>Ready to Close More Deals?</h1>
                   <p >Start your 14-day free trial today. No credit card required. Our team is ready to help you get started.</p>
                   <div className="btn">
                     <Link to="/contact" className="sale-btn " id='plan-btn'>Start Free Trail</Link>

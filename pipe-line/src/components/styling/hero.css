@@ -1,48 +1,51 @@
-/* =========================
-   HERO SECTION
-========================= */
-
 .hero {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   padding: 140px 5% 80px;
-
   text-align: center;
-  background:radial-gradient(ellipse at 50% 40%,rgba(90,71,245,.28) 0%,transparent 70%),
+  background:
+    radial-gradient(
+      ellipse at 50% 30%,
+      rgba(91, 91, 246, 0.12) 0%,
+      transparent 65%
+    ),
+    linear-gradient(180deg, #2c2c38 0%, var(--bg) 100%);
+  transition: background 0.3s ease;
 }
-  
-/* Badge */
+
+body.dark-mode .hero {
+  background:
+    radial-gradient(
+      ellipse at 50% 40%,
+      rgba(91, 91, 246, 0.2) 0%,
+      transparent 70%
+    ),
+    var(--bg);
+}
 
 .hero-badge {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 8px;
-
-  background: rgba(27, 47, 134, 0.329);
-  border: 1px solid rgba(79,110,247,0.3);
-
-  color: rgba(198,207,247,0.7);
-
-  padding: 6px 16px;
-  border-radius: 100px;
-
-  font-size: 0.9rem;
+  gap: 20px;
+  background: var(--badge-bg);
+  border: 1px solid var(--btn-muted-border);
+  color: var(--badge-color);
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 0.82rem;
   font-weight: 600;
-
   margin-bottom: 2rem;
 }
 
-/* Animated Dot */
-
 .dot {
   position: relative;
+  margin-right: 10px;
   width: 10px;
   height: 10px;
-  background: var(--accent);
+  background: var(--primary);
   border-radius: 50%;
 }
 
@@ -51,13 +54,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-
   width: 8px;
   height: 8px;
-
-  border: 2px solid var(--accent);
+  border: 2px solid var(--primary);
   border-radius: 50%;
-
   transform: translate(-50%, -50%);
   animation: ripple 1.8s infinite;
 }
@@ -68,7 +68,6 @@
     height: 8px;
     opacity: 1;
   }
-
   100% {
     width: 30px;
     height: 30px;
@@ -76,57 +75,37 @@
   }
 }
 
-/* Heading */
-
 .hero h1 {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 800;
-  line-height: 1.1;
-
+  line-height: 1.15;
   max-width: 850px;
-
   margin-bottom: 1.5rem;
+  color: var(--text);
 }
 
-/* Gradient Text */
-
 .gradient {
-  background: linear-gradient(
-    90deg,
-    #4f6ef7,
-    #7c3aed
-  );
-
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
+  background-clip: text;
   display: inline-block;
 }
 
-/* Description */
-
 .hero p {
-  color: var(--muted2);
-
-  font-size: 1.2rem;
+  color: var(--muted);
+  font-size: 1.1rem;
   line-height: 1.8;
-
   max-width: 700px;
-
   margin-bottom: 2.5rem;
 }
-
-/* =========================
-   BUTTONS
-========================= */
 
 .hero-btns {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
-
   margin-bottom: 3rem;
 }
 
@@ -134,63 +113,50 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   gap: 8px;
-
-  padding: 16px 40px;
-
+  padding: 14px 28px;
   border-radius: 10px;
-
   font-size: 16px;
   font-weight: 600;
-
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .btn1 {
-  background: #4a40ff;
+  background: var(--primary);
   color: white;
 }
 
 .btn1:hover {
-  box-shadow:
-    0 8px 20px rgba(131,124,255,0.9);
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(91, 91, 246, 0.35);
 }
 
 .btn2 {
-  background: rgba(29,28,41,0.2);
-  color: var(--muted);
-
-  border: 1px solid rgba(144,141,207,0.37);
+  background: var(--btn-secondary-bg);
+  color: var(--text);
+  border: 1px solid var(--btn-secondary-border);
 }
 
-/* =========================
-   LINE
-========================= */
+.btn2:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
 
 .line {
   width: 70%;
   height: 1px;
-
   border: none;
-
   margin: 1rem auto;
-
-  background:
-   var(--bg3);
+  background: var(--border);
 }
-
-/* =========================
-   STATS
-========================= */
 
 .hero-stats {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
   gap: 4rem;
-
   margin-top: 20px;
 }
 
@@ -199,47 +165,33 @@
 }
 
 .stat-num {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text);
 }
 
 .stat-label {
-  color: var(--muted2);
-  font-size: 0.9rem;
+  color: var(--muted);
+  font-size: 0.82rem;
 }
-
-/* =========================
-   DASHBOARD
-========================= */
 
 .hero-dashboard {
   width: 100%;
   max-width: 900px;
-
   margin-top: 4rem;
-
-  background: var(--bg3);
-
+  background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 16px;
-
+  border-radius: var(--radius);
   overflow: hidden;
-
-  box-shadow:
-    0 40px 100px rgba(0,0,0,0.5);
+  box-shadow: var(--shadow);
 }
-
-/* Browser Bar */
 
 .dash-bar {
   display: flex;
   align-items: center;
   gap: 8px;
-
-  padding: 12px 20px;
-
-  background: var(--bg3);
-
+  padding: 14px 18px;
+  background: var(--bg2);
   border-bottom: 1px solid var(--border);
 }
 
@@ -254,57 +206,34 @@
 .dot-r {
   background: #ff5f57;
 }
-
 .dot-y {
   background: #ffbd2e;
 }
-
 .dot-g {
   background: #28c840;
 }
 
 .dash-url {
   flex: 1;
-
-  background: var(--bg3);
-
-  border-radius: 6px;
-
-  padding: 4px 12px;
-
-  font-size: 0.75rem;
-
-  color: var(--muted2);
-
+  margin-left: 14px;
+  font-size: 0.78rem;
+  color: var(--muted);
   text-align: center;
 }
 
-/* Dashboard Body */
-
 .dash-body {
-  padding: 24px;
-  background: var(--bg3);
-
+  padding: 28px;
+  background: var(--card);
   display: flex;
   flex-direction: column;
-
   gap: 20px;
 }
-
-/* Revenue Card */
 
 .dash-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   gap: 20px;
-
-  padding: 20px;
-
-  border-radius: 12px;
-
-  background: var(--bg3);
 }
 
 .dash-card-main {
@@ -315,167 +244,127 @@
 .dash-card-title {
   color: var(--muted);
   font-size: 0.85rem;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .dash-card-value {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 800;
+  color: var(--text);
 }
 
 .dash-card-change {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  width: 160px;
-  height: 42px;
-
-  background: #0d4c36;
-
-  color: #10b981;
-
+  padding: 4px 8px;
+  background: var(--green-bg);
+  color: var(--green);
   border-radius: 8px;
-
-  font-size: 0.9rem;
+  font-size: 0.78rem;
   font-weight: 600;
 }
 
-/* Pipeline */
+body.dark-mode .dash-card-change {
+  background: rgba(22, 163, 74, 0.15);
+}
 
 .pipeline-stages {
   display: flex;
   gap: 12px;
 }
 
-
 .stage {
   flex: 1;
-
   padding: 16px;
-
   border-radius: 10px;
-
   border: 1px solid var(--border);
-
-  background: var(--bg2);
+  background: var(--bg-alt);
 }
 
 .stage-name {
   color: var(--muted);
-  font-size: 0.8rem;
-
+  font-size: 0.85rem;
   margin-bottom: 8px;
 }
 
 .stage-count {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 700;
+  color: var(--text);
 }
 
-.stage-bar {
-  height: 4px;
-
-  border-radius: 10px;
-
+.stage-track {
+  height: 8px;
+  border-radius: 6px;
+  background: var(--bg-alt);
+  overflow: hidden;
   margin-top: 10px;
 }
 
-/* =========================
-   TABLET
-========================= */
+.stage-bar {
+  height: 100%;
+  border-radius: 6px;
+}
 
 @media (max-width: 900px) {
-
   .hero-stats {
     gap: 2rem;
   }
-
   .pipeline-stages {
     flex-wrap: wrap;
   }
-
   .stage {
     min-width: 45%;
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
-
 @media (max-width: 768px) {
-
   .hero {
     padding: 120px 20px 60px;
   }
-
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
-
   .hero p {
     font-size: 1rem;
   }
-
   .hero-btns {
     width: 100%;
     flex-direction: column;
   }
-
   .custom-btn {
     width: 100%;
   }
-
   .hero-stats {
     gap: 2rem;
   }
-
   .dash-card {
     flex-direction: column;
     align-items: flex-start;
   }
-
-  .dash-card-change {
-    width: 100%;
-  }
-
   .pipeline-stages {
     flex-direction: column;
   }
-
   .stage {
     width: 100%;
   }
 }
 
-/* =========================
-   SMALL MOBILE
-========================= */
-
 @media (max-width: 480px) {
-
   .hero h1 {
     font-size: 2rem;
   }
-
   .hero p {
     font-size: 0.95rem;
   }
-
   .hero-badge {
     font-size: 0.8rem;
   }
-
   .stat-num {
     font-size: 1.5rem;
   }
-
   .dash-card-value {
     font-size: 1.6rem;
-  }
-
-  .dash-url {
-    font-size: 0.65rem;
   }
 }

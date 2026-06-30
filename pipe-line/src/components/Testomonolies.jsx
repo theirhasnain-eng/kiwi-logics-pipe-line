@@ -62,9 +62,9 @@ export default function Testomonolies() {
   return (
     <section className="testimonials" id="testimonials">
       <div className="text-center">
-        <div className="section-label">
-          Testimonials
-        </div>
+        <h3 className="section-label">
+          Testimonials</h3>
+        
 
         <h2 className="section-title">
           Trusted by Sales Leaders

@@ -1,6 +1,7 @@
 .testimonials {
-  background: var(--bg3);
+  background: var(--bg);
   padding: 100px 5%;
+  transition: background 0.3s ease;
 }
 
 .testimonials-wrapper {
@@ -8,45 +9,54 @@
   margin-top: 4rem;
 }
 
+.section-label {
+  text-transform: capitalize;
+}
+
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 28px;
 }
 
 .tcard {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 32px;
+  padding: 30px;
+  transition: box-shadow 0.2s;
+}
+
+.tcard:hover {
+  box-shadow: var(--shadow);
 }
 
 .stars {
-  color: #3b82f6;
+  color: var(--primary);
   font-size: 14px;
   letter-spacing: 4px;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
 .tcard blockquote {
-  color: #e5e7eb;
-  font-size: 1rem;
+  color: var(--text);
+  font-size: 0.98rem;
   line-height: 1.7;
-  font-weight: 600;
-  margin-bottom: 30px;
+  font-weight: 400;
+  margin-bottom: 22px;
 }
 
 .tcard-author {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
 .avatar {
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  background: #1d4ed8;
+  background: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,13 +66,14 @@
 }
 
 .tcard-author h4 {
-  font-size: 1rem;
-  margin-bottom: 4px;
+  font-size: 0.92rem;
+  color: var(--text);
+  margin-bottom: 2px;
 }
 
 .tcard-author span {
-  color: #9ca3af;
-  font-size: 0.9rem;
+  color: var(--muted);
+  font-size: 0.8rem;
 }
 
 .nav-btn {
@@ -71,24 +82,27 @@
   transform: translateY(-50%);
   width: 36px;
   height: 36px;
-  border: none;
+  border: 1px solid var(--border);
   border-radius: 50%;
-  background: rgba(255,255,255,0.08);
-  color: #9ca3af;
+  background: var(--card);
+  color: var(--muted);
   cursor: pointer;
   z-index: 10;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
 }
 
 .prev {
   left: -60px;
 }
-
 .next {
   right: -60px;
 }
 
 .nav-btn:hover {
-  color: white;
+  color: var(--primary);
+  border-color: var(--primary);
 }
 
 .nav-btn:disabled {
@@ -109,25 +123,26 @@
   height: 10px;
   border: none;
   border-radius: 50px;
-  background: #4b5563;
+  background: var(--border);
   cursor: pointer;
   padding: 0;
+  transition:
+    width 0.2s,
+    background 0.2s;
 }
 
 .slider-dot.active {
   width: 30px;
-  background: #60a5fa;
+  background: var(--primary);
 }
 
 @media (max-width: 992px) {
   .testimonials-grid {
     grid-template-columns: 1fr;
   }
-
   .prev {
     left: -15px;
   }
-
   .next {
     right: -15px;
   }

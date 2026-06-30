@@ -44,8 +44,7 @@ export default function Features() {
               <h1>Platform Features</h1>
               <p className='pera'>Discover the powerful tools and capabilities that make PipelineIQ the preferred CRM for modern sales teams.</p>
               <div className="btn">
-                <Link to="/" className="btn-text">Home</Link>
-                <div>/</div>
+                <Link to="/" className="btn-text">Home  /  </Link>
                 <Link to="/features" className="btn-text">Features</Link>
               </div>
             </div>

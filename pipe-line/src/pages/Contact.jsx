@@ -31,8 +31,7 @@ export default function Contact() {
         <h1>Contact Us</h1>
         <p>Ready to transform your sales process? Get in touch with our team for a personalized demo or any questions.</p>
         <div className="btn">
-          <Link to="/" className="btn-text">Home</Link>
-          <div>/</div>
+          <Link to="/" className="btn-text">Home  /  </Link>
           <Link to="/contact" className="btn-text">Contact</Link>
         </div>
       </div>

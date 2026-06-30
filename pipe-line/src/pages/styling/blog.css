@@ -1,77 +1,72 @@
-/* =========================
-   HERO SECTION
-========================= */
-
 .blog-hero {
   padding: 100px 20px 70px;
   text-align: center;
-  background: #020817;
+  background: var(--page-hero-bg);
 }
 
 .hero-badge {
   display: inline-block;
-  padding: 8px 18px;
-  background: rgba(37, 100, 235, 0.24);
-  color: #feffff;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
   border-radius: 30px;
-  font-size: 14px;
+  font-size: 0.82rem;
   font-weight: 600;
 }
 
 .blog-hero h1 {
   margin-top: 10px;
-  font-size: 40px;
+  font-size: 2.5rem;
+  font-weight: 800;
   color: white;
-  line-height: 1.1;
+  line-height: 1.15;
 }
 
 .blog-hero p {
-  max-width: 750px;
+  max-width: 640px;
   margin: 25px auto;
-  color: #94a3b8;
-  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.05rem;
   line-height: 1.8;
 }
-
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  color: #64748b;
   font-size: 15px;
 }
-.breadcrumb .blog {
-  color: whitesmoke;
+.breadcrumb-text {
+  color: var(--muted);
+}
+.breadcrumb-text:hover {
+  color: white;
+}
+.breadcrumb-blog {
+  color: white;
 }
 
-/* =========================
-   SEARCH BAR
-========================= */
-
 .blog-search {
-  padding: 0 20px 80px;
-  background: #020817;
+  padding: 100px 20px 80px;
+  background: var(--bg);
+  transition: background 0.3s ease;
 }
 
 .search-box {
   max-width: 650px;
   height: 60px;
   margin: auto;
-
-  background: #111827;
-  border: 1px solid #1e293b;
+  background: var(--card);
+  border: 1px solid var(--border);
   border-radius: 50px;
-
   display: flex;
   align-items: center;
-
   padding: 0 25px;
 }
 
 .search-icon {
-  color: #94a3b8;
+  color: var(--muted);
   font-size: 18px;
 }
 
@@ -80,24 +75,17 @@
   border: none;
   outline: none;
   background: transparent;
-
-  color: white;
+  color: var(--text);
   font-size: 16px;
-
   margin-left: 15px;
 }
 
 .search-box input::placeholder {
-  color: #64748b;
+  color: var(--muted);
 }
-
-/* =========================
-   FILTER BUTTONS
-========================= */
 
 .filter-buttons {
   margin-top: 35px;
-
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -106,67 +94,53 @@
 
 .filter-buttons button {
   padding: 12px 22px;
-
-  border: none;
+  border: 1px solid var(--border);
   border-radius: 30px;
-
-  background: #111827;
-  color: #cbd5e1;
-
+  background: var(--card);
+  color: var(--muted);
   cursor: pointer;
-
-  transition: 0.3s;
+  transition: 0.2s;
+  font-family: inherit;
 }
 
 .filter-buttons button:hover {
-  background: #2563eb;
+  background: var(--primary);
   color: white;
+  border-color: var(--primary);
 }
-
-/* Active button */
 
 .filter-buttons .active {
-  background: #2563eb;
+  background: var(--primary);
   color: white;
+  border-color: var(--primary);
 }
-
-/* =========================
-   BLOG GRID
-========================= */
 
 .blog-grid {
   max-width: 1300px;
-
   margin: 60px auto 0;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-
-  gap: 30px;
+  gap: 28px;
+  padding: 0 20px;
 }
 
-/* =========================
-   BLOG CARD
-========================= */
-
 .blog-card {
-  background: #111827;
-
-  border: 1px solid #1e293b;
-
-  border-radius: 24px;
-
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   overflow: hidden;
-
   text-decoration: none;
   max-height: 550px;
-
-  transition: 0.3s;
+  transition:
+    transform 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
 }
 
 .blog-card:hover {
-  transform: translateY(-10px);
-  border-color: #2563eb;
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow);
 }
 
 .blog-image {
@@ -183,16 +157,13 @@
 }
 
 .blog-card:hover .blog-image img {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
-
-/* =========================
-   CONTENT
-========================= */
 
 .blog-content {
   padding: 25px;
 }
+
 .blog-detail {
   display: flex;
   flex-wrap: wrap;
@@ -200,6 +171,7 @@
   align-items: flex-start;
   gap: 10px;
 }
+
 .blog-detail span {
   padding-top: 7px;
   font-weight: 400;
@@ -209,57 +181,39 @@
 
 .blog-category {
   display: block;
-
-  background: rgba(37, 99, 235, 0.15);
-
-  color: #3b82f6;
-
+  background: var(--badge-bg);
+  color: var(--primary);
   padding: 7px 15px;
-
   border-radius: 20px;
-
   font-size: 14px;
-
   font-weight: 600;
 }
 
 .blog-content h2 {
-  color: white;
-
+  color: var(--text);
   margin-top: 20px;
-
   font-size: 20px;
-
   line-height: 1.4;
 }
 
 .blog-content p {
   margin-top: 15px;
-  color: #94a3b8;
+  color: var(--muted);
   line-height: 1.7;
   font-size: 15px;
-
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* Show only 2 lines */
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
 .blog-footer {
   margin-top: 25px;
-
   display: flex;
   gap: 10px;
   justify-content: flex-start;
-
-  color: #64748b;
-
+  color: var(--muted);
   font-size: 14px;
 }
 
@@ -268,13 +222,15 @@
   height: 40px;
   border-radius: 50%;
 }
+
 .blog-footer .text {
   display: flex;
   flex-direction: column;
 }
+
 .text .auther {
   font-weight: 500;
-  color: whitesmoke;
+  color: var(--text);
 }
 
 .news-letter {
@@ -282,10 +238,12 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 570px;
-  background-color: #020817;
-  padding: 100px 0%;
+  min-height: 570px;
+  background-color: var(--bg-alt);
+  padding: 100px 5%;
+  transition: background 0.3s ease;
 }
+
 .news-main {
   display: flex;
   flex-direction: column;
@@ -293,99 +251,106 @@
   align-items: center;
   text-align: center;
   width: 720px;
+  max-width: 100%;
   min-height: 360px;
-  border-radius: 20px;
+  border-radius: var(--radius);
   gap: 15px;
   background-color: var(--card);
+  border: 1px solid var(--border);
+  padding: 40px;
+  box-shadow: var(--shadow);
 }
+
 .news-letter h3 {
-  padding: 5px 10px;
-  font-size: 15px;
+  padding: 8px 16px;
+  font-size: 0.8rem;
   border-radius: 30px;
-  background-color: rgba(113, 119, 190, 0.5);
-  color: #0051ff;
-  font-weight: 400;
+  background-color: var(--badge-bg);
+  color: var(--badge-color);
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 0.08em;
 }
+
 .news-letter h1 {
   font-size: 2.2rem;
-  font-weight: 700;
-  color: white;
+  font-weight: 800;
+  color: var(--text);
 }
+
 .news-letter p {
   max-width: 650px;
+  color: var(--muted);
 }
 
 .email-info input {
-  border: none;
+  border: 1px solid var(--input-border);
   outline: none;
-  padding: 15px 40px;
+  padding: 14px 24px;
   border-radius: 30px;
-  background-color: rgba(46, 45, 45, 0.301);
-
-  color: rgb(255, 255, 255) !important;
-  font-size: 17px;
+  background-color: var(--input-bg);
+  color: var(--input-text) !important;
+  font-size: 16px;
+  font-family: inherit;
 }
 
 .email-info input::placeholder {
-  color: #cad1db;
+  color: var(--muted);
 }
 
 .email-info input:focus {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--primary);
+  border-color: var(--primary);
 }
+
 .email-info {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-}
-.email-info button {
-  padding: 15px 35px;
-  border-radius: 30px;
-  background-color: #0051ff;
-  border-color: #0051ff;
-  color: whitesmoke;
-  font-size: 1rem;
+  justify-content: center;
 }
 
-/* =========================
-   TABLET
-========================= */
+.email-info button {
+  padding: 14px 28px;
+  border-radius: 30px;
+  background-color: var(--primary);
+  border: none;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.email-info button:hover {
+  background: var(--primary-dark);
+}
 
 @media (max-width: 992px) {
   .blog-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .blog-hero h1 {
-    font-size: 50px;
+    font-size: 2rem;
   }
 }
-
-/* =========================
-   MOBILE
-========================= */
 
 @media (max-width: 768px) {
   .blog-grid {
     grid-template-columns: 1fr;
   }
-
   .blog-hero h1 {
-    font-size: 40px;
+    font-size: 1.8rem;
   }
-
   .blog-hero p {
     font-size: 16px;
   }
-
   .search-box {
     height: 55px;
   }
-
   .filter-buttons {
     gap: 10px;
   }
-
   .filter-buttons button {
     padding: 10px 18px;
     font-size: 14px;

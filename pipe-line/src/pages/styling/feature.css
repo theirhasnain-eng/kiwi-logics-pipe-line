@@ -1,37 +1,40 @@
 #deal {
-  background-color: rgba(0, 0, 0, 0.945);
+  background-color: var(--bg-alt);
   text-align: center;
   padding: 100px 5%;
+  transition: background 0.3s ease;
 }
 
 #deal h1 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: var(--text);
 }
 
 .deal-p {
-  max-width: 800px;
+  max-width: 640px;
   margin: auto;
+  color: var(--muted);
 }
 
 .pera {
   max-width: 670px !important;
 }
 
-/* ================= FEATURE SECTION ================= */
-
 .feature-section {
   width: 100%;
   min-height: 700px;
   padding: 100px 5%;
-  background: #07111f;
+  background: var(--bg);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 70px;
+  transition: background 0.3s ease;
 }
 
 .sell {
-  background-color: rgba(0, 0, 0, 0.836);
+  background-color: var(--bg-alt);
 }
 
 .feature-left {
@@ -41,25 +44,28 @@
 
 .feature-left h5 {
   display: inline-block;
-  padding: 8px 18px;
-  border-radius: 20px;
-  background: rgba(37, 99, 235, 0.25);
-  color: #60a5fa;
-  font-size: 12px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  background: var(--badge-bg);
+  color: var(--badge-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   margin-bottom: 25px;
 }
 
 .feature-left h1 {
-  color: white;
-  font-size: 2rem;
+  color: var(--text);
+  font-size: 2.3rem;
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 20px;
 }
 
 .feature-left p {
-  color: #94a3b8;
-  font-size: 1rem;
+  color: var(--muted);
+  font-size: 1.05rem;
   line-height: 1.8;
   margin-bottom: 35px;
 }
@@ -77,13 +83,13 @@
 }
 
 .check-icon {
-  color: #60a5fa;
+  color: var(--primary);
   font-size: 18px;
   flex-shrink: 0;
 }
 
 .feature-item span {
-  color: #94a3b8;
+  color: var(--muted);
   font-size: 1rem;
 }
 
@@ -98,34 +104,45 @@
   max-width: 650px;
   height: 420px;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: var(--radius);
 }
 
-/* ================= BUTTONS ================= */
-
 .sale-btn {
-  padding: 10px 20px;
-  background-color: white;
-  color: #60a5fa;
-  font-size: 15px;
-  font-weight: 400;
+  padding: 14px 28px;
+  background-color: var(--primary);
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
   border-radius: 10px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.sale-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
 }
 
 #sale h1 {
   font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text);
 }
 
 .sale-btn1 {
-  padding: 10px 20px;
+  padding: 14px 28px;
   border-radius: 10px;
-  border: 1px solid rgba(204, 205, 206, 0.616);
-  background-color: #1254a585;
-  font-size: 15px;
-  font-weight: 500;
+  border: 1px solid var(--border);
+  background-color: var(--btn-secondary-bg);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: border-color 0.2s, color 0.2s;
 }
 
-/* ================= TABLET ================= */
+.sale-btn1:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
 
 @media (max-width: 992px) {
   .feature-section {
@@ -134,40 +151,16 @@
     text-align: center;
   }
 
-  .feature-left {
-    max-width: 100%;
-  }
-
-  .feature-left h1 {
-    font-size: 2.2rem;
-  }
-
-  .feature-list {
-    align-items: center;
-  }
-
-  .feature-item {
-    justify-content: center;
-  }
-
-  .feature-right img {
-    max-width: 100%;
-    height: 350px;
-  }
-
-  #deal h1,
-  #sale h1 {
-    font-size: 2rem;
-  }
+  .feature-left { max-width: 100%; }
+  .feature-left h1 { font-size: 2.2rem; }
+  .feature-list { align-items: center; }
+  .feature-item { justify-content: center; }
+  .feature-right img { max-width: 100%; height: 350px; }
+  #deal h1, #sale h1 { font-size: 2rem; }
 }
 
-/* ================= MOBILE ================= */
-
 @media (max-width: 768px) {
-  #deal {
-    padding: 80px 20px;
-  }
-
+  #deal { padding: 80px 20px; }
   .feature-section {
     flex-direction: column;
     padding: 80px 20px;
@@ -175,84 +168,24 @@
     text-align: center;
   }
 
-  .feature-left h1 {
-    font-size: 1.8rem;
-  }
-
-  .feature-left p {
-    font-size: 15px;
-  }
-
-  .feature-item {
-    justify-content: flex-start;
-    text-align: left;
-  }
-
-  .feature-item span {
-    font-size: 15px;
-  }
-
-  .feature-right img {
-    height: 300px;
-  }
-
-  #deal h1,
-  #sale h1 {
-    font-size: 1.8rem;
-  }
-
-  .deal-p,
-  .pera {
-    max-width: 100% !important;
-  }
+  .feature-left h1 { font-size: 1.8rem; }
+  .feature-left p { font-size: 15px; }
+  .feature-item { justify-content: flex-start; text-align: left; }
+  .feature-item span { font-size: 15px; }
+  .feature-right img { height: 300px; }
+  #deal h1, #sale h1 { font-size: 1.8rem; }
+  .deal-p, .pera { max-width: 100% !important; }
 }
 
-/* ================= SMALL PHONES ================= */
-
 @media (max-width: 480px) {
-  .feature-section {
-    padding: 60px 15px;
-  }
-
-  .feature-left h5 {
-    font-size: 11px;
-    padding: 6px 14px;
-  }
-
-  .feature-left h1 {
-    font-size: 1.5rem;
-  }
-
-  .feature-left p {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  .feature-item {
-    gap: 10px;
-  }
-
-  .feature-item span {
-    font-size: 14px;
-  }
-
-  .check-icon {
-    font-size: 15px;
-  }
-
-  .feature-right img {
-    height: 240px;
-    border-radius: 15px;
-  }
-
-  #deal h1,
-  #sale h1 {
-    font-size: 1.5rem;
-  }
-
-  .sale-btn,
-  .sale-btn1 {
-    width: 100%;
-    text-align: center;
-  }
+  .feature-section { padding: 60px 15px; }
+  .feature-left h5 { font-size: 11px; padding: 6px 14px; }
+  .feature-left h1 { font-size: 1.5rem; }
+  .feature-left p { font-size: 14px; line-height: 1.7; }
+  .feature-item { gap: 10px; }
+  .feature-item span { font-size: 14px; }
+  .check-icon { font-size: 15px; }
+  .feature-right img { height: 240px; border-radius: 12px; }
+  #deal h1, #sale h1 { font-size: 1.5rem; }
+  .sale-btn, .sale-btn1 { width: 100%; text-align: center; }
 }

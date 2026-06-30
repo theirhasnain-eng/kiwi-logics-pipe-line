@@ -117,9 +117,8 @@ export default function Integrations() {
                <h1>Integrations</h1>
                <p>Connect PipelineIQ with the tools your team already uses. 200+ integrations and growing.</p>
                <div className="btn">
-                 <Link to="/" className="btn-text">Home</Link>
-                 <div>/</div>
-                 <Link to="/integration" className="btn-text">Integration</Link>
+                 <Link to="/" className="btn-text">Home  /  </Link>
+                 <Link to="/integrations" className="btn-text">Integration</Link>
                </div>
              </div>
            </section>
@@ -164,7 +163,7 @@ export default function Integrations() {
                </div>
              </div>
            </section>
-            <section className="contact-hero">
+            <section className="integ-hero">
              <div className="main-sub">
                <h1>Don't See Your Tool?</h1>
                <p>We're constantly adding new integrations. Let us know what tools you need and we'll prioritize them.</p>
