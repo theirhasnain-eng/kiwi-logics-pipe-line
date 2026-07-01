@@ -155,7 +155,7 @@
 .share-article h3 {
   font-size: 1rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--text);
   margin-bottom: 10px;
 }
 
@@ -170,9 +170,9 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: none;
-  background: #263143;
-  color: #cbd5e1;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--muted);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -184,24 +184,20 @@
 }
 
 .share-icon:hover {
-  background: #2563eb;
+  background: var(--primary);
+  border-color: var(--primary);
   color: #fff;
   transform: translateY(-2px);
 }
-
 .related-artical {
   display: flex;
   flex-wrap: wrap;
   padding: 0px 200px;
   justify-content: flex-start;
   align-items: flex-start;
-  background: rgba(0, 0, 0, 0.836);
+  background: var(--bg-alt, var(--bg));
   color: var(--text);
   width: 100%;
-
-  transition:
-    background 0.3s ease,
-    color 0.3s ease;
 }
 
 .related-section {
@@ -209,14 +205,14 @@
   padding-bottom: 30px;
   max-width: 950px;
   width: 100%;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--bg-alt, var(--bg));
 }
 
 .related-section h2 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 40px;
-  color: white !important;
+  color: var(--text);
 }
 
 .related-grid {

@@ -147,12 +147,13 @@ button {
   left: 0;
   bottom: 0;
   width: 100%;
-  background: #07101d;
+  background: var(--card);
+  border-top: 1px solid var(--border);
   display: none;
   gap: 12px;
   padding: 12px;
   z-index: 999;
-  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--shadow);
 }
 
 /* Style the Links */
@@ -172,22 +173,24 @@ button {
 
 /* Book Demo */
 .demo-btn {
-  background: #1d2634;
-  color: #fff !important;
+  background: var(--btn-secondary-bg);
+  color: var(--text) !important;
+  border: 1px solid var(--btn-secondary-border);
 }
 
 .demo-btn:hover {
-  background: #2a3647;
+  background: var(--bg-alt);
+  border-color: var(--primary);
 }
 
 /* Start Trial */
 .trial-btn {
-  background: #2563eb;
+  background: var(--primary);
   color: #fff !important;
 }
 
 .trial-btn:hover {
-  background: #1d4ed8;
+  background: var(--primary-dark);
 }
 
 /* Prevent visited links from changing color */
