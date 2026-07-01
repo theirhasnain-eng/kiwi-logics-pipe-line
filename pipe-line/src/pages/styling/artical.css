@@ -16,6 +16,7 @@
   max-width: 950px;
   padding-top: 50px;
   margin: auto;
+  width: 100%;
 }
 
 .back-btn {
@@ -92,6 +93,7 @@
   height: 55px;
   border-radius: 50%;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .author-info {
@@ -125,9 +127,21 @@
 .article-content {
   max-width: 760px;
   margin: auto;
+  width: 100%;
 }
 
-.article-content p {
+/* Headings inside blog body — bold */
+.content-heading {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--text);
+  line-height: 1.4;
+  margin: 30px 0 12px;
+}
+
+/* Body paragraphs inside blog content — small, not bold */
+.content-paragraph {
+  font-weight: 400;
   color: var(--muted);
   line-height: 2;
   font-size: 17px;
@@ -149,6 +163,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
 .share-icon {
@@ -165,6 +180,7 @@
   cursor: pointer;
   text-decoration: none;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .share-icon:hover {
@@ -192,6 +208,7 @@
   padding-top: 60px;
   padding-bottom: 30px;
   max-width: 950px;
+  width: 100%;
   background-color: rgb(0, 0, 0);
 }
 
@@ -269,6 +286,35 @@
   line-height: 1.7;
 }
 
+/* ==========================================================
+   RESPONSIVE — Laptop / small desktop (1200px and below)
+   ========================================================== */
+@media (max-width: 1200px) {
+  .related-artical {
+    padding: 0 80px;
+  }
+}
+
+/* ==========================================================
+   RESPONSIVE — Laptop (1024px and below)
+   ========================================================== */
+@media (max-width: 1024px) {
+  .article-container {
+    max-width: 90%;
+  }
+
+  .related-artical {
+    padding: 0 40px;
+  }
+
+  .article-image {
+    height: 420px;
+  }
+}
+
+/* ==========================================================
+   RESPONSIVE — Tablet (992px and below)
+   ========================================================== */
 @media (max-width: 992px) {
   .article-title {
     font-size: 2rem;
@@ -278,18 +324,121 @@
   }
 }
 
+/* ==========================================================
+   RESPONSIVE — Tablet (768px and below)
+   ========================================================== */
 @media (max-width: 768px) {
+  .article-page {
+    padding-top: 60px;
+  }
+
+  .article-container {
+    max-width: 100%;
+    padding: 40px 24px 0;
+  }
+
   .article-title {
     font-size: 1.8rem;
     max-width: 100%;
   }
+
   .article-description {
     font-size: 16px;
+    margin-bottom: 30px;
   }
-  .article-content p {
+
+  .article-content {
+    max-width: 100%;
+  }
+
+  .content-heading {
+    font-size: 1.15rem;
+    margin: 24px 0 10px;
+  }
+
+  .content-paragraph {
     font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 26px;
   }
+
   .article-author {
     align-items: flex-start;
+    margin-bottom: 36px;
+  }
+
+  .article-image {
+    height: 280px;
+    margin-bottom: 40px;
+  }
+
+  .related-artical {
+    padding: 0 24px;
+  }
+
+  .related-section {
+    padding-top: 40px;
+  }
+
+  .related-content h3 {
+    font-size: 20px;
+  }
+}
+
+/* ==========================================================
+   RESPONSIVE — Mobile (480px and below)
+   ========================================================== */
+@media (max-width: 480px) {
+  .article-container {
+    padding: 30px 16px 0;
+  }
+
+  .article-title {
+    font-size: 1.5rem;
+  }
+
+  .article-category {
+    font-size: 13px;
+    padding: 6px 12px;
+    margin-bottom: 20px;
+  }
+
+  .article-author img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .article-image {
+    height: 200px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+  }
+
+  .content-heading {
+    font-size: 1.05rem;
+  }
+
+  .content-paragraph {
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 22px;
+  }
+
+  .related-artical {
+    padding: 0 16px;
+  }
+
+  .related-content {
+    padding: 18px;
+  }
+
+  .related-content h3 {
+    font-size: 18px;
+  }
+
+  .share-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
   }
 }
