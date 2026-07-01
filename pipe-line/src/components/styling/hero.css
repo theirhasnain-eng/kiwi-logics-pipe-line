@@ -8,11 +8,11 @@
   text-align: center;
   background:
     radial-gradient(
-      ellipse at 50% 30%,
-      rgba(91, 91, 246, 0.12) 0%,
-      transparent 65%
+      ellipse at 50% 50%,
+      rgba(88, 87, 87, 0.74) 0%,
+      transparent 90%
     ),
-    linear-gradient(180deg, #2c2c38 0%, var(--bg) 100%);
+    linear-gradient(180deg, #000000fb 10%, var(--bg) 90%);
   transition: background 0.3s ease;
 }
 
@@ -82,7 +82,7 @@ body.dark-mode .hero {
   line-height: 1.15;
   max-width: 850px;
   margin-bottom: 1.5rem;
-  color: var(--text);
+  color: white !important;
 }
 
 .gradient {
@@ -94,10 +94,11 @@ body.dark-mode .hero {
 }
 
 .hero p {
-  color: var(--muted);
+  color: var(--muted2);
   font-size: 1.1rem;
+  font-weight: 600;
   line-height: 1.8;
-  max-width: 700px;
+  max-width: 650px;
   margin-bottom: 2.5rem;
 }
 

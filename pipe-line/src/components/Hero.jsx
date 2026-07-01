@@ -34,8 +34,7 @@ function Hero(){
       </h1>
 
       <p>
-        PipelineIQ helps sales teams manage pipelines, automate outreach, and
-        close deals faster with AI-powered insights and intelligent workflow automation.
+       PipelineIQ is the modern CRM that helps sales teams manage pipelines, automate outreach, and close deals faster with AI-powered insights and intelligent workflow automation.
       </p>
 
         <div className="hero-btns">

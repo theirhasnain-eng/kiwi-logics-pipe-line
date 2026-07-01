@@ -1,0 +1,128 @@
+* Privacy content */ .privacy-section {
+  background: rgb(0, 0, 0);
+  padding: 100px 5%;
+  transition: background 0.3s ease;
+}
+
+.privacy-section .narrow {
+  padding: 100px 0%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.updated {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 40px;
+}
+
+.privacy-section h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+
+.privacy-section h2:first-of-type {
+  margin-top: 0;
+}
+
+.privacy-section p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+.privacy-section .container .plan-item .check-icon {
+  font-size: 12px;
+}
+.privacy-section .container .plan-item span {
+  line-height: 2rem;
+  color: var(--muted);
+}
+
+.securty {
+  max-width: 650px;
+}
+.right {
+  max-width: 650px;
+}
+.contac {
+  max-width: 650px;
+}
+.rights-grid {
+  display: grid;
+  max-width: 650px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 24px;
+  margin-bottom: 14px;
+}
+
+.right-card {
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  max-width: 350px;
+  padding: 50px 20px;
+}
+
+.right-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.right-card p {
+  font-size: 0.92rem;
+  margin-bottom: 0;
+}
+
+.contact-box {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  max-width: 650px;
+  padding: 55px 26px;
+  margin-top: 16px;
+}
+
+.contact-box strong {
+  display: block;
+  color: var(--text);
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.contact-box p {
+  margin-bottom: 0;
+}
+
+.contact-box a {
+  color: var(--primary);
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-sub {
+    min-height: auto;
+    padding: 80px 20px 50px;
+  }
+  .main-sub h1 {
+    font-size: 2rem;
+  }
+  .privacy-section {
+    padding: 60px 20px;
+  }
+  .privacy-section h2 {
+    font-size: 1.3rem;
+  }
+  .rights-grid {
+    grid-template-columns: 1fr;
+  }
+}

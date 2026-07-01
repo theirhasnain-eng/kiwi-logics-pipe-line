@@ -38,7 +38,7 @@
   font-size: 15px;
 }
 .breadcrumb-text {
-  color: var(--muted);
+  color: rgba(245, 245, 245, 0.815);
 }
 .breadcrumb-text:hover {
   color: white;
@@ -250,7 +250,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 720px;
+
   max-width: 100%;
   min-height: 360px;
   border-radius: var(--radius);

@@ -57,7 +57,7 @@ export default function About() {
   return (
     
     <main className="page-section">
-      <Navebar/>
+      
           <section className="contact-hero">
             <div className="main">
               <h1>About PipelineIQ</h1>

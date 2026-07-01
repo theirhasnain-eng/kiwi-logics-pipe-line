@@ -82,9 +82,9 @@ function Footer(){
       <div className="footer-bottom">
         <p>© 2026 PipelineIQ. All rights reserved.</p>
         <div className="footer-legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Style Guide</a>
+          <Link to="/privacy">Privacy Policy</Link>
+           <Link to="/terms">Terms of Service</Link>
+          <Link to="style">Style Guide</Link>
         </div>
       </div>
     </footer>
