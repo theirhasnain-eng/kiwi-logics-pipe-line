@@ -189,6 +189,9 @@
   color: #fff;
   transform: translateY(-2px);
 }
+.related-card:hover .related-content h3 {
+  color: var(--primary);
+}
 .related-artical {
   display: flex;
   flex-wrap: wrap;
@@ -203,7 +206,7 @@
 .related-section {
   padding-top: 60px;
   padding-bottom: 30px;
-  max-width: 950px;
+  max-width: 850px;
   width: 100%;
   background-color: var(--bg-alt, var(--bg));
 }

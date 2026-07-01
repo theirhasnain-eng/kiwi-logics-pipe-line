@@ -163,6 +163,9 @@
 .blog-content {
   padding: 25px;
 }
+.blog-card:hover .blog-content h2 {
+  color: var(--primary);
+}
 
 .blog-detail {
   display: flex;

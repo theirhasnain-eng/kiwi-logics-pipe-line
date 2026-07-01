@@ -125,6 +125,7 @@ export default function Article() {
                     <h3>{blog.title}</h3>
 
                     <p>{blog.description}</p>
+                    <p>{blog.date}</p>
                   </div>
                 </Link>
               ))}
