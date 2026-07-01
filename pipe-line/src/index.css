@@ -43,6 +43,7 @@
   --nav-shadow: 0 5px 20px rgba(20, 20, 43, 0.08);
   /* Page hero gradient */
   --page-hero-bg: linear-gradient(135deg, var(--primary), #3a3ad9);
+
   /* Badge */
   --badge-bg: #eeeefe;
   --badge-color: var(--primary-dark);
@@ -52,6 +53,7 @@
   --btn-muted-bg: rgba(91, 91, 246, 0.08);
   --btn-muted-border: rgba(91, 91, 246, 0.25);
 }
+
 body.dark-mode {
   --ink: #f1f0ff;
   --ink-soft: #a9a9c8;

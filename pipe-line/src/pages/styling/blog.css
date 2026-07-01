@@ -1,7 +1,16 @@
 .blog-hero {
   padding: 100px 20px 70px;
   text-align: center;
-  background: var(--page-hero-bg);
+  background-color: #3a3ad9;
+}
+body.dark-mode .blog-hero {
+  background:
+    radial-gradient(
+      ellipse at 50% 50%,
+      rgba(0, 0, 0, 0.897) 0%,
+      transparent 70%
+    ),
+    linear-gradient(180deg, #2c45838f 40%, var(--bg) 70%);
 }
 
 .hero-badge {
