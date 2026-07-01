@@ -141,9 +141,6 @@ button {
 /* ===================================
    MOBILE STICKY CTA
 =================================== */
-/* ==========================
-   Mobile CTA
-========================== */
 
 .mobile-cta {
   position: fixed;
@@ -176,7 +173,7 @@ button {
 /* Book Demo */
 .demo-btn {
   background: #1d2634;
-  color: #fff;
+  color: #fff !important;
 }
 
 .demo-btn:hover {
@@ -186,7 +183,7 @@ button {
 /* Start Trial */
 .trial-btn {
   background: #2563eb;
-  color: #fff;
+  color: #fff !important;
 }
 
 .trial-btn:hover {
