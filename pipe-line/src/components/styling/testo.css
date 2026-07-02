@@ -2,33 +2,39 @@
   background: var(--bg);
   padding: 100px 5%;
   transition: background 0.3s ease;
+  overflow: hidden;
 }
 
 .testimonials-wrapper {
   position: relative;
+  overflow: hidden;
   margin-top: 4rem;
 }
 
-.section-label {
-  text-transform: capitalize;
+.testimonials-track {
+  display: flex;
+  gap: 28px;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
 }
 
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
+/* ===== Cards ===== */
 
 .tcard {
+  flex: 0 0 calc((100% - 56px) / 3);
+  box-sizing: border-box;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 30px;
-  transition: box-shadow 0.2s;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
 }
 
 .tcard:hover {
   box-shadow: var(--shadow);
+  transform: translateY(-5px);
 }
 
 .stars {
@@ -42,8 +48,7 @@
   color: var(--text);
   font-size: 0.98rem;
   line-height: 1.7;
-  font-weight: 400;
-  margin-bottom: 22px;
+  margin: 0 0 22px;
 }
 
 .tcard-author {
@@ -57,58 +62,71 @@
   height: 42px;
   border-radius: 50%;
   background: var(--primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 700;
   flex-shrink: 0;
 }
 
 .tcard-author h4 {
-  font-size: 0.92rem;
   color: var(--text);
-  margin-bottom: 2px;
+  font-size: 0.95rem;
+  margin: 0;
 }
 
 .tcard-author span {
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
 }
+
+/* ===== Navigation Buttons ===== */
 
 .nav-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 36px;
-  height: 36px;
-  border: 1px solid var(--border);
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
-  background: var(--card);
-  color: var(--muted);
+  border: 1px solid var(--border);
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 18px;
   cursor: pointer;
-  z-index: 10;
-  transition:
-    color 0.2s,
-    border-color 0.2s;
+  z-index: 100;
+  transition: all 0.25s ease;
 }
 
-.prev {
-  left: -60px;
-}
-.next {
-  right: -60px;
-}
-
-.nav-btn:hover {
-  color: var(--primary);
+.nav-btn:hover:not(:disabled) {
+  background: var(--primary);
   border-color: var(--primary);
+  color: #fff;
 }
 
 .nav-btn:disabled {
-  opacity: 0.4;
+  /* Keep the circle itself fully visible on any background —
+     only dim the arrow glyph so it still reads as "disabled"
+     without disappearing into dark themes. */
+  background: rgba(15, 23, 42, 0.95);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.35);
+  opacity: 1;
   cursor: not-allowed;
 }
+
+/* Always visible */
+.prev {
+  left: 15px;
+}
+
+.next {
+  right: 15px;
+}
+
+/* ===== Slider Dots ===== */
 
 .slider-dots {
   display: flex;
@@ -122,13 +140,10 @@
   width: 10px;
   height: 10px;
   border: none;
-  border-radius: 50px;
+  border-radius: 999px;
   background: var(--border);
   cursor: pointer;
-  padding: 0;
-  transition:
-    width 0.2s,
-    background 0.2s;
+  transition: all 0.25s ease;
 }
 
 .slider-dot.active {
@@ -136,14 +151,59 @@
   background: var(--primary);
 }
 
+/* ===========================
+   Tablet
+=========================== */
+
 @media (max-width: 992px) {
-  .testimonials-grid {
-    grid-template-columns: 1fr;
+  .testimonials {
+    padding: 80px 30px;
   }
+
+  .tcard {
+    flex: 0 0 100%;
+    padding: 26px;
+  }
+
+  .nav-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
+
   .prev {
-    left: -15px;
+    left: 10px;
   }
+
   .next {
-    right: -15px;
+    right: 10px;
+  }
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 70px 20px;
+  }
+
+  .tcard {
+    padding: 22px;
+  }
+
+  .nav-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 15px;
+  }
+
+  .prev {
+    left: 8px;
+  }
+
+  .next {
+    right: 8px;
   }
 }
