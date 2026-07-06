@@ -1,14 +1,13 @@
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import './styling/hero.css';
-import { FaBook } from 'react-icons/fa';
-function Hero(){
-
-      const headings = [
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "./styling/hero.css";
+import { FaBook } from "react-icons/fa";
+function Hero() {
+  const headings = [
     "Automation",
     "Sales Intelligence",
     "AI-Powered CRM",
-    "Smart Pipelines"
+    "Smart Pipelines",
   ];
 
   const [index, setIndex] = useState(0);
@@ -20,140 +19,141 @@ function Hero(){
 
     return () => clearInterval(interval);
   }, []);
-    return(
-        <>
-    <section className="hero" id="home">
-      <div className="hero-badge">
-        <span className="dot"></span>
-        Trusted by 10,000+ sales teams worldwide
-      </div>
+  return (
+    <>
+      <section className="hero" id="home">
+        <div className="hero-badge">
+          <span className="dot"></span>
+          Trusted by 10,000+ sales teams worldwide
+        </div>
 
-      <h1>
-        Close More Deals with<br />
-        <span className="gradient">{headings[index]}</span>
-      </h1>
+        <h1>
+          Close More Deals with
+          <br />
+          <span className="gradient">{headings[index]}</span>
+        </h1>
 
-      <p>
-       PipelineIQ is the modern CRM that helps sales teams manage pipelines, automate outreach, and close deals faster with AI-powered insights and intelligent workflow automation.
-      </p>
+        <p>
+          PipelineIQ is the modern CRM that helps sales teams manage <br />{" "}
+          pipelines, automate outreach, and close deals faster with AI-powered
+          insights and intelligent workflow automation.
+        </p>
 
         <div className="hero-btns">
-              <Link to="/contact" className="custom-btn btn1">Start Free Trial →</Link>
-              <Link to="/contact" className="custom-btn btn2">
-               <FaBook style={{ marginRight: "8px", color: "var(--primary)" }} />
-              Book a Demo
-                 </Link>
+          <Link to="/contact" className="custom-btn btn1">
+            Start Free Trial →
+          </Link>
+          <Link to="/contact" className="custom-btn btn2">
+            <FaBook style={{ marginRight: "8px", color: "var(--primary)" }} />
+            Book a Demo
+          </Link>
         </div>
 
         <div className="line"></div>
 
-      <div className="hero-stats">
-        {[
-          { num: '10K+', label: 'Teams Worldwide' },
-          { num: '50M+', label: 'Deals Tracked' },
-          { num: '99.9%', label: 'Uptime SLA' },
-          { num: '4.9/5', label: 'User Rating' },
-        ].map(s => (
-          <div className="stat" key={s.label}>
-            <div className="stat-num">{s.num}</div>
-            <div className="stat-label">{s.label}</div>
-          </div>
-        ))}
-      </div>
-
-      {/* Dashboard Preview */}
-      <div className="hero-dashboard">
-        <div className="dash-bar">
-          <div className="dot-r" /><div className="dot-y" /><div className="dot-g" />
-          <div className="dash-url">app.pipelineiq.com/dashboard</div>
+        <div className="hero-stats">
+          {[
+            { num: "10K+", label: "Teams Worldwide" },
+            { num: "50M+", label: "Deals Tracked" },
+            { num: "99.9%", label: "Uptime SLA" },
+            { num: "4.9/5", label: "User Rating" },
+          ].map((s) => (
+            <div className="stat" key={s.label}>
+              <div className="stat-num">{s.num}</div>
+              <div className="stat-label">{s.label}</div>
+            </div>
+          ))}
         </div>
-        <div className="dash-body">
-          <div className="dash-card">
 
-                  <div className="dash-card-main">
-                    <div><div className="dash-card-title">Revenue Pipeline</div></div>
-            <div className="dash-card-value">$2.4M</div>
-                  </div>
-               <div className="dash-card-change">↑ +24% this month</div>
+        {/* Dashboard Preview */}
+        <div className="hero-dashboard">
+          <div className="dash-bar">
+            <div className="dot-r" />
+            <div className="dot-y" />
+            <div className="dot-g" />
+            <div className="dash-url">app.pipelineiq.com/dashboard</div>
           </div>
-          {/* <div className="dash-card">
+          <div className="dash-body">
+            <div className="dash-card">
+              <div className="dash-card-main">
+                <div>
+                  <div className="dash-card-title">REVENUE PIPELINE</div>
+                </div>
+                <div className="dash-card-value">$2.4M</div>
+              </div>
+              <div className="dash-card-change">↑ +24% this month</div>
+            </div>
+            {/* <div className="dash-card">
             <div className="dash-card-title">Active Deals</div>
             <div className="dash-card-value">85</div>
             <div className="dash-card-change">↑ +12 this week</div>
           </div> */}
-          {/* <div className="dash-card">
+            {/* <div className="dash-card">
             <div className="dash-card-title">Closed Won</div>
             <div className="dash-card-value">$890K</div>
             <div className="dash-card-change">↑ +18% vs last month</div>
           </div> */}
-         <div className="pipeline-stages">
-  {[
-    {
-      name: "Qualified",
-      count: 42,
-      color: "#60a5fa",
-      bg: "rgba(96,165,250,0.12)",
-      width: "80%",
-    },
-    {
-      name: "Proposal",
-      count: 28,
-      color: "#a78bfa",
-      bg: "rgba(167,139,250,0.12)",
-      width: "60%",
-    },
-    {
-      name: "Negotiation",
-      count: 15,
-      color: "#fb923c",
-      bg: "rgba(251,146,60,0.12)",
-      width: "40%",
-    },
-    {
-      name: "Closed Won",
-      count: "$890k",
-      color: "#10b981",
-      bg: "rgba(16,185,129,0.12)",
-      width: "90%",
-    },
-  ].map((s) => (
-    <div
-      className="stage"
-      key={s.name}
-      style={{
-        background: s.bg,
-        border: `1px solid ${s.color}40`,
-      }}
-    >
-      <div className="stage-name">
-        {s.name}
-      </div>
+            <div className="pipeline-stages">
+              {[
+                {
+                  name: "Qualified",
+                  count: 42,
+                  color: "#60a5fa",
+                  bg: "rgba(96,165,250,0.12)",
+                  width: "80%",
+                },
+                {
+                  name: "Proposal",
+                  count: 28,
+                  color: "#a78bfa",
+                  bg: "rgba(167,139,250,0.12)",
+                  width: "60%",
+                },
+                {
+                  name: "Negotiation",
+                  count: 15,
+                  color: "#fb923c",
+                  bg: "rgba(251,146,60,0.12)",
+                  width: "40%",
+                },
+                {
+                  name: "Closed Won",
+                  count: "$890k",
+                  color: "#10b981",
+                  bg: "rgba(16,185,129,0.12)",
+                  width: "90%",
+                },
+              ].map((s) => (
+                <div
+                  className="stage"
+                  key={s.name}
+                  style={{
+                    background: s.bg,
+                    border: `1px solid ${s.color}40`,
+                  }}
+                >
+                  <div className="stage-name">{s.name}</div>
 
-      <div
-        className="stage-count"
-        style={{ color: s.color }}
-      >
-        {s.count}
-      </div>
+                  <div className="stage-count" style={{ color: s.color }}>
+                    {s.count}
+                  </div>
 
-      <div className="stage-track">
-        <div
-          className="stage-bar"
-          style={{
-            background: s.color,
-            width: s.width,
-          }}
-        />
-      </div>
-    </div>
-  ))}
-</div>
+                  <div className="stage-track">
+                    <div
+                      className="stage-bar"
+                      style={{
+                        background: s.color,
+                        width: s.width,
+                      }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-        </>
-    )
-       
-    
+      </section>
+    </>
+  );
 }
 export default Hero;

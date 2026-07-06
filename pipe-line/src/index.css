@@ -18,7 +18,7 @@
   --ink: #14142b;
   --ink-soft: #5b5b73;
   --bg: #ffffff;
-  --bg-alt: #f6f6fc;
+  --bg-alt: RGB(255, 255, 255);
   --bg2: #f5f5fb;
   --bg3: #ffffff;
   --card: #ffffff;
@@ -33,16 +33,16 @@
   --accent-light: var(--primary-light);
   --radius: 14px;
   --maxw: 1180px;
-  --font-display: "Plus Jakarta Sans", "Segoe UI", sans-serif;
-  --font-body: "Inter", "Segoe UI", sans-serif;
+  --font-display: "Inter", "System ui", sans-serif;
+  --font-body: "Inter", "System ui", sans-serif;
   --input-bg: #ffffff;
   --input-border: #e6e6f0;
   --input-text: #14142b;
   --input-focus: var(--primary);
-  --nav-bg: rgba(255, 255, 255, 0.92);
+  --nav-bg: rgb(255, 255, 255);
   --nav-shadow: 0 5px 20px rgba(20, 20, 43, 0.08);
   /* Page hero gradient */
-  --page-hero-bg: linear-gradient(135deg, var(--primary), #3a3ad9);
+  --page-hero-bg: #2563eb;
 
   /* Badge */
   --badge-bg: #eeeefe;
@@ -59,19 +59,19 @@ body.dark-mode {
   --ink-soft: #a9a9c8;
   --bg: #0e0e1a;
 
-  --bg-alt: #161628;
+  --bg-alt: RGB(17, 24, 39);
   --bg2: #1c1c32;
   --bg3: #1a1a2e;
   --card: #1e1e36;
   --border: rgba(255, 255, 255, 0.1);
-  --text: #f1f0ff;
+  --text: #ffffff;
   --muted: #a9a9c8;
   --muted2: #8c8cab;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   --input-bg: #1e1e36;
   --input-border: rgba(255, 255, 255, 0.12);
   --input-text: #f1f0ff;
-  --nav-bg: rgba(14, 14, 26, 0.95);
+  --nav-bg: rgb(4, 6, 14);
   --nav-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
   --badge-bg: rgba(91, 91, 246, 0.15);
   --badge-color: var(--primary-light);
@@ -79,6 +79,7 @@ body.dark-mode {
   --btn-secondary-border: rgba(255, 255, 255, 0.15);
   --btn-muted-bg: rgba(91, 91, 246, 0.12);
   --btn-muted-border: rgba(91, 91, 246, 0.3);
+  --page-hero-bg: #1e3a8a;
 }
 html {
   scroll-behavior: smooth;

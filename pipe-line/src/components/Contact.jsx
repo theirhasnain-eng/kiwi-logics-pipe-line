@@ -41,26 +41,20 @@ export default function Contact() {
     {
       icon: <FaClock />,
       title: "Office Hours",
-      text:
-        "Mon - Fri: 8:00 AM - 6:00 PM PST\nSat - Sun: Closed",
+      text: "Mon - Fri: 8:00 AM - 6:00 PM PST\nSat - Sun: Closed",
     },
   ];
 
   return (
     <section className="contact" id="contact">
       <div className="text-center">
-        <div className="section-label">
-          Get In Touch
-        </div>
+        <div className="section-label">Get In Touch</div>
 
-        <h2 className="section-title">
-          Talk to Our Sales Team
-        </h2>
+        <h2 className="section-title">Talk to Our Sales Team</h2>
 
         <p className="section-sub">
-          Ready to transform your sales process?
-          Fill out the form and our team will
-          reach out within 24 hours.
+          Ready to transform your sales process? Fill out the form and our team
+          will reach out within 24 hours. hours to schedule a personalized demo.
         </p>
       </div>
 
@@ -73,21 +67,13 @@ export default function Contact() {
               <div className="form-group">
                 <label>Full Name</label>
 
-                <input
-                  type="text"
-                  placeholder="John Doe"
-                  required
-                />
+                <input type="text" placeholder="John Doe" required />
               </div>
 
               <div className="form-group">
                 <label>Work Email</label>
 
-                <input
-                  type="email"
-                  placeholder="john@company.com"
-                  required
-                />
+                <input type="email" placeholder="john@company.com" required />
               </div>
             </div>
 
@@ -95,19 +81,14 @@ export default function Contact() {
               <div className="form-group">
                 <label>Phone Number</label>
 
-                <input
-                  type="tel"
-                  placeholder="(555) 234-5678"
-                />
+                <input type="tel" placeholder="(555) 234-5678" />
               </div>
 
               <div className="form-group">
                 <label>Team Size</label>
 
                 <select>
-                  <option>
-                    Select team size
-                  </option>
+                  <option>Select team size</option>
                   <option>1–5 users</option>
                   <option>6–20 users</option>
                   <option>21–50 users</option>
@@ -118,27 +99,18 @@ export default function Contact() {
             </div>
 
             <div className="form-group">
-              <label>
-                How can we help?
-              </label>
+              <label>How can we help?</label>
 
-              <textarea
-                placeholder="Tell us about your sales team and what you're looking for in a CRM..."
-              />
+              <textarea placeholder="Tell us about your sales team and what you're looking for in a CRM..." />
             </div>
 
-            <button
-              type="submit"
-              className="submit-btn"
-            >
+            <button type="submit" className="submit-btn">
               Request Demo →
             </button>
 
             {msg === "success" && (
               <div className="form-success">
-                ✅ Thank you! Our team
-                will reach out within 24
-                hours.
+                ✅ Thank you! Our team will reach out within 24 hours.
               </div>
             )}
           </form>
@@ -148,13 +120,8 @@ export default function Contact() {
 
         <div className="contact-info">
           {contactInfo.map((item) => (
-            <div
-              className="info-block"
-              key={item.title}
-            >
-              <div className="info-icon">
-                {item.icon}
-              </div>
+            <div className="info-block" key={item.title}>
+              <div className="info-icon">{item.icon}</div>
 
               <div>
                 <h4>{item.title}</h4>

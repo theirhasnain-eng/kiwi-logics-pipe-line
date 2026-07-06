@@ -1,5 +1,5 @@
 .testimonials {
-  background: var(--bg);
+  background: var(--bg-alt);
   padding: 100px 5%;
   transition: background 0.3s ease;
   overflow: hidden;
@@ -10,7 +10,17 @@
   overflow: hidden;
   margin-top: 4rem;
 }
-
+.testimonials p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  max-width: 730px !important;
+}
+.testimonials p {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+}
 .testimonials-track {
   display: flex;
   gap: 28px;
@@ -23,7 +33,7 @@
 .tcard {
   flex: 0 0 calc((100% - 56px) / 3);
   box-sizing: border-box;
-  background: var(--card);
+  background: var(--bg-alt);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 30px;
@@ -39,9 +49,10 @@
 
 .stars {
   color: var(--primary);
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 4px;
   margin-bottom: 22px;
+  font-weight: 500;
 }
 
 .tcard blockquote {
@@ -91,7 +102,7 @@
   height: 46px;
   border-radius: 50%;
   border: 1px solid var(--border);
-  background: rgba(15, 23, 42, 0.95);
+  background: rgba(15, 23, 42, 0.425);
   backdrop-filter: blur(8px);
   color: #fff;
   font-size: 18px;
@@ -106,16 +117,16 @@
   color: #fff;
 }
 
-.nav-btn:disabled {
-  /* Keep the circle itself fully visible on any background —
+/* .nav-btn:disabled {
+  Keep the circle itself fully visible on any background —
      only dim the arrow glyph so it still reads as "disabled"
-     without disappearing into dark themes. */
-  background: rgba(15, 23, 42, 0.95);
+     without disappearing into dark themes. 
+  background: rgba(15, 23, 42, 0.466);
   border-color: rgba(255, 255, 255, 0.25);
   color: rgba(255, 255, 255, 0.35);
   opacity: 1;
   cursor: not-allowed;
-}
+}  */
 
 /* Always visible */
 .prev {

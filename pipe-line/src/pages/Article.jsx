@@ -26,40 +26,42 @@ export default function Article() {
   return (
     <section className="article-page">
       <div className="article-container">
-        <Link to="/blog" className="back-btn">
-          ← Back to Blog
-        </Link>
-
-        <div className="breadcrumb" id="breadcrumb">
-          <Link to="/" className="blog">
-            Home
+        <div className="artical-hero">
+          <Link to="/blog" className="back-btn">
+            ← Back to Blog
           </Link>
-          /
-          <Link to="/blog" className="blog">
-            Blog
-          </Link>
-          /<span>Article</span>
-        </div>
 
-        <span className="article-category">{article.category}</span>
-
-        <h1 className="article-title">{article.title}</h1>
-
-        <p className="article-description">{article.description}</p>
-
-        <div className="article-author">
-          <img src={article.imag} alt={article.author} />
-
-          <div className="author-info">
-            <span className="author-name">{article.author}</span>
-
-            <span className="author-meta">
-              {article.date} • {article.readTime}
-            </span>
+          <div className="breadcrumb" id="breadcrumb">
+            <Link to="/" className="blog">
+              Home
+            </Link>
+            /
+            <Link to="/blog" className="blog">
+              Blog
+            </Link>
+            /<span>Article</span>
           </div>
-        </div>
 
-        <div className="article-divider"></div>
+          <span className="article-category">{article.category}</span>
+
+          <h1 className="article-title">{article.title}</h1>
+
+          <p className="article-description">{article.description}</p>
+
+          <div className="article-author">
+            <img src={article.imag} alt={article.author} />
+
+            <div className="author-info">
+              <span className="author-name">{article.author}</span>
+
+              <span className="author-meta">
+                {article.date} • {article.readTime}
+              </span>
+            </div>
+          </div>
+
+          <div className="article-divider"></div>
+        </div>
 
         <img
           src={article.image}

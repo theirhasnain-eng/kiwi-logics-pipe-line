@@ -92,8 +92,8 @@ export default function Testomonolies() {
         <h2 className="section-title">Trusted by Sales Leaders</h2>
 
         <p className="section-sub">
-          See how PipelineIQ helps sales teams around the world close more
-          deals.
+          See how PipelineIQ helps sales teams around the world close more deals
+          and grow revenue.
         </p>
       </div>
 
