@@ -181,7 +181,7 @@
 
 .integration-card {
   min-height: 400px;
-  background-color: var(--page-hero-bg);
+  background-color: var(--card);
   padding: 100px 0%;
 }
 .integration-card .main-sub {

@@ -76,7 +76,7 @@ function Counter({ target, suffix, divisor, prefix, isFloat }) {
 export default function Stats() {
   return (
     <>
-      <div className="stats-band">
+      <div className="stats-band" data-aos="fade-up">
         <div className="stats-grid">
           {stats.map((s) => (
             <div key={s.label} className="stats-col">

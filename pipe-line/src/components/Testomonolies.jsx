@@ -85,8 +85,8 @@ export default function Testomonolies() {
   const translate = `calc(-${slide} * (100% + ${GAP_PX}px) / ${cardsPerView})`;
 
   return (
-    <section className="testimonials" id="testimonials">
-      <div className="text-center">
+    <section className="testimonials" id="testimonials" data-aos="fade-up">
+      <div className="text-center" data-aos="fade-up">
         <h3 className="section-label">Testimonials</h3>
 
         <h2 className="section-title">Trusted by Sales Leaders</h2>
@@ -97,7 +97,7 @@ export default function Testomonolies() {
         </p>
       </div>
 
-      <div className="testimonials-wrapper">
+      <div className="testimonials-wrapper" data-aos="fade-up">
         <button
           className="nav-btn prev"
           onClick={prevSlide}
@@ -108,12 +108,13 @@ export default function Testomonolies() {
 
         <div
           className="testimonials-track"
+          data-aos="fade-in"
           style={{
             transform: `translateX(${translate})`,
           }}
         >
           {testimonials.map((t) => (
-            <div className="tcard" key={t.name}>
+            <div className="tcard" data-aos="fade-up" key={t.name}>
               <div className="stars">★★★★★</div>
 
               <blockquote>"{t.quote}"</blockquote>
@@ -132,6 +133,7 @@ export default function Testomonolies() {
 
         <button
           className="nav-btn next"
+          data-aos="fade-in"
           onClick={nextSlide}
           disabled={slide === totalSlides}
         >
@@ -139,7 +141,7 @@ export default function Testomonolies() {
         </button>
       </div>
 
-      <div className="slider-dots">
+      <div className="slider-dots" data-aos="fade-up">
         {Array.from({ length: totalSlides + 1 }).map((_, index) => (
           <button
             key={index}

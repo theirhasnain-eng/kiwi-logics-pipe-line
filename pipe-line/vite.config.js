@@ -6,4 +6,7 @@ export default defineConfig(({ mode }) => ({
   // Use `npm run build:ghpages` when deploying to GitHub Pages project sites.
   base: mode === 'ghpages' ? '/kiwi-logics-pipe-line/' : '/',
   plugins: [react()],
+  resolve: {
+    dedupe: ['react', 'react-dom'],
+  },
 }))

@@ -183,10 +183,12 @@
   }
 
   .prev {
+    z-index: 1;
     left: 10px;
   }
 
   .next {
+    z-index: 1;
     right: 10px;
   }
 }

@@ -1,4 +1,7 @@
 import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -18,6 +21,13 @@ import ScrollToTop from "./components/ScrollToTop";
 import MobileCTA from "./components/MobileCTA";
 
 export default function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 200,
+    });
+  }, []);
   return (
     <>
       <ScrollToTop />

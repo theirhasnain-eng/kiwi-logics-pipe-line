@@ -46,19 +46,19 @@ export default function Contact() {
   ];
 
   return (
-    <section className="contact" id="contact">
-      <div className="text-center">
+    <section className="contact" id="contact" data-aos="fade-up">
+      <div className="text-center" data-aos="fade-up">
         <div className="section-label">Get In Touch</div>
 
         <h2 className="section-title">Talk to Our Sales Team</h2>
 
         <p className="section-sub">
           Ready to transform your sales process? Fill out the form and our team
-          will reach out within 24 hours. hours to schedule a personalized demo.
+          will reach out within 24 hoursto schedule a personalized demo.
         </p>
       </div>
 
-      <div className="contact-grid">
+      <div className="contact-grid" data-aos="fade-up">
         {/* LEFT SIDE */}
 
         <div className="contact-form-wrap">
@@ -98,7 +98,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="form-group">
+            <div className="form-group" data-aos="fade-up">
               <label>How can we help?</label>
 
               <textarea placeholder="Tell us about your sales team and what you're looking for in a CRM..." />
@@ -118,7 +118,7 @@ export default function Contact() {
 
         {/* RIGHT SIDE */}
 
-        <div className="contact-info">
+        <div className="contact-info" data-aos="fade-up">
           {contactInfo.map((item) => (
             <div className="info-block" key={item.title}>
               <div className="info-icon">{item.icon}</div>
@@ -137,7 +137,7 @@ export default function Contact() {
             </div>
           ))}
 
-          <div className="map-embed">
+          <div className="map-embed" data-aos="fade-up">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50470.064610856!2d-122.44791269999999!3d37.7577627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064e2e3c195%3A0xcfaa3e4c8b31d264!2sMarket%20St%2C%20San%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1"
               width="100%"
