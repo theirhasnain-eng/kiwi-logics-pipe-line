@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 export default function MobileCTA() {
   return (
-    <div className="mobile-cta">
-      <Link to="/contact" className="demo-btn">
+    <div className="mobile-cta" data-aos="fade-up">
+      <Link to="/contact" className="demo-btn" data-aos="fade-up">
         {" "}
         <FaCalendarCheck /> Book Demo
       </Link>

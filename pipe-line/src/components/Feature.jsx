@@ -59,8 +59,8 @@ export default function Feature() {
   }, []);
 
   return (
-    <section className="features" id="features" data-aos="fade-in">
-      <div className="text-center" data-aos="fade-in">
+    <section className="features" id="features" data-aos="fade-up">
+      <div className="text-center" data-aos="fade-up">
         <div className="section-label">Features</div>
         <h2 className="section-title">Everything You Need to Sell Smarter</h2>
         <p className="section-sub">
@@ -73,7 +73,7 @@ export default function Feature() {
           <div
             key={f.title}
             className="feature-card reveal"
-            data-aos="fade-in"
+            data-aos="fade-up"
             ref={(el) => (cardsRef.current[i] = el)}
             style={{ transitionDelay: `${i * 80}ms` }}
           >
